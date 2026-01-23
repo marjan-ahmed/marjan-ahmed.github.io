@@ -138,7 +138,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Favourite Tools</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-2">
-            {DATA.favouriteTools.map((tool, id) => (
+            {DATA.favouriteTools && DATA.favouriteTools.map((tool: { name: string; url: string; icon?: string }, id) => (
               <BlurFade key={tool.name} delay={BLUR_FADE_DELAY * 10.5 + id * 0.05}>
                 <Link
                   href={tool.url}
