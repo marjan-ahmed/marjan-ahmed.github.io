@@ -31,39 +31,41 @@ export default function HackathonsSection() {
           </div>
         </div>
         <Timeline>
-          {DATA.hackathons.map((hackathon: typeof DATA.hackathons[number]) => (
-            <TimelineItem key={hackathon.title + hackathon.dates} className="w-full flex items-start justify-between gap-10">
+          {DATA.hackathons.map((hackathon) => {
+            const hack = hackathon as NonNullable<typeof DATA.hackathons[number]>;
+            return (
+            <TimelineItem key={hack.title + hack.dates} className="w-full flex items-start justify-between gap-10">
               <TimelineConnectItem className="flex items-start justify-center">
-                {hackathon.image ? (
+                {hack.image ? (
                   <img
-                    src={hackathon.image}
-                    alt={hackathon.title}
+                    src={hack.image}
+                    alt={hack.title}
                     className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border object-contain flex-none"
                   />
                 ) : (
                   <div className="size-10 bg-card z-10 shrink-0 border rounded-full shadow ring-2 ring-border flex-none flex items-center justify-center text-xs font-semibold text-muted-foreground">
-                    {hackathon.title.split(" ").map(word => word[0]).join("").slice(0, 2).toUpperCase()}
+                    {hack.title.split(" ").map(word => word[0]).join("").slice(0, 2).toUpperCase()}
                   </div>
                 )}
               </TimelineConnectItem>
               <div className="flex flex-1 flex-col justify-start gap-2 min-w-0">
-                {hackathon.dates && (
-                  <time className="text-xs text-muted-foreground">{hackathon.dates}</time>
+                {hack.dates && (
+                  <time className="text-xs text-muted-foreground">{hack.dates}</time>
                 )}
-                {hackathon.title && (
-                  <h3 className="font-semibold leading-none">{hackathon.title}</h3>
+                {hack.title && (
+                  <h3 className="font-semibold leading-none">{hack.title}</h3>
                 )}
-                {hackathon.location && (
-                  <p className="text-sm text-muted-foreground">{hackathon.location}</p>
+                {hack.location && (
+                  <p className="text-sm text-muted-foreground">{hack.location}</p>
                 )}
-                {hackathon.description && (
+                {hack.description && (
                   <p className="text-sm text-muted-foreground leading-relaxed wrap-break-word">
-                    {hackathon.description}
+                    {hack.description}
                   </p>
                 )}
-                {hackathon.links && hackathon.links.length > 0 && (
+                {hack.links && hack.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
-                    {hackathon.links.map((link, idx) => (
+                    {hack.links.map((link, idx) => (
                       <Link
                         href={link.href}
                         key={idx}
@@ -80,7 +82,8 @@ export default function HackathonsSection() {
                 )}
               </div>
             </TimelineItem>
-          ))}
+            );
+          })}
         </Timeline>
       </div>
     </section>
