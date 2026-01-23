@@ -6,7 +6,7 @@ import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeli
 
 export default function HackathonsSection() {
   // Only render if there are hackathons to show
-  if (!DATA.hackathons || DATA.hackathons.length === 0) {
+  if (!DATA.hackathons || DATA.hackathons.length < 1) {
     return null;
   }
 
