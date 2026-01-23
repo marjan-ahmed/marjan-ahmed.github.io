@@ -4,11 +4,33 @@ import Link from "next/link";
 import { DATA } from "@/data/resume";
 import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeline";
 
+// Define the type for a Hackathon
+type Hackathon = {
+  title?: string;
+  dates?: string;
+  location?: string;
+  description?: string;
+  image?: string;
+  links?: { href: string; title: string; icon?: React.ReactNode }[];
+};
+
 export default function HackathonsSection() {
   // Only render if there are hackathons to show
   if (!DATA.hackathons || DATA.hackathons.length < 1) {
     return null;
   }
+
+type Hackathon = {
+  readonly title?: string;
+  readonly dates?: string;
+  readonly location?: string;
+  readonly description?: string;
+  readonly image?: string;
+  readonly links?: readonly { readonly href: string; readonly title: string; readonly icon?: React.ReactNode }[];
+};
+
+  // Cast DATA.hackathons to Hackathon[]
+const hackathons: readonly Hackathon[] = DATA.hackathons;
 
   return (
     <section id="hackathons" className="overflow-hidden">
@@ -31,10 +53,8 @@ export default function HackathonsSection() {
           </div>
         </div>
         <Timeline>
-          {DATA.hackathons.map((hackathon) => {
-            const hack = hackathon as NonNullable<typeof DATA.hackathons[number]>;
-            return (
-            <TimelineItem key={hack.title + hack.dates} className="w-full flex items-start justify-between gap-10">
+          {hackathons.map((hack, idx) => (
+            <TimelineItem key={hack.title || idx + idx} className="w-full flex items-start justify-between gap-10">
               <TimelineConnectItem className="flex items-start justify-center">
                 {hack.image ? (
                   <img
@@ -44,31 +64,30 @@ export default function HackathonsSection() {
                   />
                 ) : (
                   <div className="size-10 bg-card z-10 shrink-0 border rounded-full shadow ring-2 ring-border flex-none flex items-center justify-center text-xs font-semibold text-muted-foreground">
-                    {hack.title.split(" ").map(word => word[0]).join("").slice(0, 2).toUpperCase()}
+                    {hack.title
+                      ? hack.title
+                          .split(" ")
+                          .map((word) => word[0])
+                          .join("")
+                          .slice(0, 2)
+                          .toUpperCase()
+                      : "NA"}
                   </div>
                 )}
               </TimelineConnectItem>
               <div className="flex flex-1 flex-col justify-start gap-2 min-w-0">
-                {hack.dates && (
-                  <time className="text-xs text-muted-foreground">{hack.dates}</time>
-                )}
-                {hack.title && (
-                  <h3 className="font-semibold leading-none">{hack.title}</h3>
-                )}
-                {hack.location && (
-                  <p className="text-sm text-muted-foreground">{hack.location}</p>
-                )}
+                {hack.dates && <time className="text-xs text-muted-foreground">{hack.dates}</time>}
+                {hack.title && <h3 className="font-semibold leading-none">{hack.title}</h3>}
+                {hack.location && <p className="text-sm text-muted-foreground">{hack.location}</p>}
                 {hack.description && (
-                  <p className="text-sm text-muted-foreground leading-relaxed wrap-break-word">
-                    {hack.description}
-                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed wrap-break-word">{hack.description}</p>
                 )}
                 {hack.links && hack.links.length > 0 && (
                   <div className="mt-1 flex flex-row flex-wrap items-start gap-2">
-                    {hack.links.map((link, idx) => (
+                    {hack.links.map((link, linkIdx) => (
                       <Link
                         href={link.href}
-                        key={idx}
+                        key={linkIdx}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -82,8 +101,7 @@ export default function HackathonsSection() {
                 )}
               </div>
             </TimelineItem>
-            );
-          })}
+          ))}
         </Timeline>
       </div>
     </section>
