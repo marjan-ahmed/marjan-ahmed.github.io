@@ -4,8 +4,6 @@ import { ImageResponse } from "next/og";
 import { allPosts } from "content-collections";
 import { DATA } from "@/data/resume";
 
-export const runtime = "edge";
-
 // Required for static export
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
