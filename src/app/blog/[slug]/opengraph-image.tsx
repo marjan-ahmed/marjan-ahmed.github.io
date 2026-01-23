@@ -7,7 +7,7 @@ import { DATA } from "@/data/resume";
 // Required for static export
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
-    slug: post.slug,
+    slug: post._meta.path.replace(/\.mdx$/, ""),
   }));
 }
 
