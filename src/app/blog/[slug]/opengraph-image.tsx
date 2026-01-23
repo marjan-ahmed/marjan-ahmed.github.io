@@ -6,6 +6,13 @@ import { DATA } from "@/data/resume";
 
 export const runtime = "edge";
 
+// Required for static export
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export const alt = "Blog Post";
 export const size = {
     width: 1200,
