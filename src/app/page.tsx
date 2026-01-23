@@ -90,7 +90,9 @@ export default function Page() {
                         className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
                       />
                     ) : (
-                      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+                      <div className="size-8 md:size-10 border rounded-full shadow ring-2 ring-border bg-muted flex-none flex items-center justify-center text-xs font-semibold text-muted-foreground">
+                        {education.school.split(" ").map(word => word[0]).join("").slice(0, 2)}
+                      </div>
                     )}
                     <div className="flex-1 min-w-0 flex flex-col gap-0.5">
                       <div className="font-semibold leading-none flex items-center gap-2">
@@ -125,6 +127,38 @@ export default function Page() {
                   {skill.icon && <skill.icon className="size-4 rounded overflow-hidden object-contain" />}
                   <span className="text-foreground text-sm font-medium">{skill.name}</span>
                 </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section id="favourite-tools">
+        <div className="flex min-h-0 flex-col gap-y-4">
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+            <h2 className="text-xl font-bold">Favourite Tools</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-2">
+            {DATA.favouriteTools.map((tool, id) => (
+              <BlurFade key={tool.name} delay={BLUR_FADE_DELAY * 10.5 + id * 0.05}>
+                <Link
+                  href={tool.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2 hover:bg-muted transition-colors"
+                >
+                  {tool.icon ? (
+                    <img 
+                      src={tool.icon} 
+                      alt={`${tool.name} icon`}
+                      className="size-4 rounded object-contain"
+                    />
+                  ) : (
+                    <div className="size-4 rounded bg-muted flex items-center justify-center text-[8px] font-bold text-muted-foreground">
+                      {tool.name.charAt(0)}
+                    </div>
+                  )}
+                  <span className="text-foreground text-sm font-medium">{tool.name}</span>
+                </Link>
               </BlurFade>
             ))}
           </div>

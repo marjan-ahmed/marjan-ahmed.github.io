@@ -5,6 +5,11 @@ import { DATA } from "@/data/resume";
 import { Timeline, TimelineItem, TimelineConnectItem } from "@/components/timeline";
 
 export default function HackathonsSection() {
+  // Only render if there are hackathons to show
+  if (!DATA.hackathons || DATA.hackathons.length === 0) {
+    return null;
+  }
+
   return (
     <section id="hackathons" className="overflow-hidden">
       <div className="flex min-h-0 flex-col gap-y-8 w-full">
@@ -17,11 +22,11 @@ export default function HackathonsSection() {
             <div className="flex-1 h-px bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col gap-y-3 items-center justify-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">I like building things</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Building Under Pressure</h2>
             <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed text-balance text-center">
-              During my time in university, I attended {DATA.hackathons.length}+
-              hackathons. People from around the country would come together and
-              build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.
+              Hackathons are where innovation meets adrenaline. Collaborating with talented individuals
+              to build solutions in limited time has sharpened my problem-solving skills and taught me
+              the value of rapid prototyping.
             </p>
           </div>
         </div>
@@ -36,7 +41,9 @@ export default function HackathonsSection() {
                     className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border object-contain flex-none"
                   />
                 ) : (
-                  <div className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border flex-none" />
+                  <div className="size-10 bg-card z-10 shrink-0 border rounded-full shadow ring-2 ring-border flex-none flex items-center justify-center text-xs font-semibold text-muted-foreground">
+                    {hackathon.title.split(" ").map(word => word[0]).join("").slice(0, 2).toUpperCase()}
+                  </div>
                 )}
               </TimelineConnectItem>
               <div className="flex flex-1 flex-col justify-start gap-2 min-w-0">

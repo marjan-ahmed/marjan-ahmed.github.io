@@ -14,9 +14,13 @@ import { cn } from "@/lib/utils";
 function LogoImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
 
+  const initials = alt.split(" ").map(word => word[0]).join("").slice(0, 2).toUpperCase();
+
   if (!src || imageError) {
     return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+      <div className="size-8 md:size-10 border rounded-full shadow ring-2 ring-border bg-muted flex-none flex items-center justify-center text-xs font-semibold text-muted-foreground">
+        {initials}
+      </div>
     );
   }
 

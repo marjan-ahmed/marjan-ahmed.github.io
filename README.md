@@ -1,28 +1,33 @@
 <div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
+<img alt="Marjan Ahmed Portfolio" src="/marjan-avatar.png" width="120" style="border-radius: 50%">
+
+# Marjan Ahmed - Portfolio
+
+**Full-Stack Developer & Agentic AI Enthusiast**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarjan-ahmed%2Fportfolio)
+
 </div>
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+Built with Next.js, [shadcn/ui](https://ui.shadcn.com/), and [Magic UI](https://magicui.design/), deployed on Vercel.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## Features
 
-# Features
+- Single config file setup at [src/data/resume.tsx](./src/data/resume.tsx)
+- Built with Next.js 14, React, TypeScript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
+- Integrated blog with MDX support
+- Responsive design for all devices
+- Optimized for performance
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Getting Started
 
-# Getting Started Locally
-
-1. Clone this repository to your local machine:
+1. Clone this repository:
 
    ```bash
-   git clone https://github.com/dillionverma/portfolio
+   git clone https://github.com/marjan-ahmed/portfolio
    ```
 
-2. Move to the cloned directory
+2. Navigate to the project:
 
    ```bash
    cd portfolio
@@ -34,13 +39,13 @@ Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://
    pnpm install
    ```
 
-4. Start the local Server:
+4. Start the development server:
 
    ```bash
    pnpm dev
    ```
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+5. Edit [src/data/resume.tsx](./src/data/resume.tsx) to customize content
 
 # License
 
