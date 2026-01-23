@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-static";
+
 const PAGE_SIZE = 5;
 const BLUR_FADE_DELAY = 0.04;
 
@@ -28,6 +30,9 @@ export default async function BlogPage({
   searchParams: Promise<{ page?: string }>;
 }) {
   const { page: pageParam } = await searchParams;
+  
+  // For static export, default to page 1 since query params aren't available
+  const currentPageFromParam = pageParam ? parseInt(pageParam, 10) : 1;
 
   const posts = allPosts;
   const sortedPosts = [...posts].sort((a, b) => {
@@ -38,7 +43,7 @@ export default async function BlogPage({
   });
 
   const totalPages = Math.ceil(sortedPosts.length / PAGE_SIZE);
-  const currentPage = normalizePage(pageParam, totalPages);
+  const currentPage = normalizePage(String(currentPageFromParam), totalPages);
   const { items: paginatedPosts, pagination } = paginate(sortedPosts, {
     page: currentPage,
     pageSize: PAGE_SIZE,

@@ -13,13 +13,11 @@ export const contentType = "image/png";
 
 const getFontData = async () => {
     try {
+        const fs = await import("fs/promises");
+        const path = await import("path");
         const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL("../../../public/fonts/CabinetGrotesk-Medium.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL("../../../public/fonts/ClashDisplay-Semibold.ttf", import.meta.url)
-            ).then((res) => res.arrayBuffer()),
+            fs.readFile(path.join(process.cwd(), "public/fonts/CabinetGrotesk-Medium.ttf")),
+            fs.readFile(path.join(process.cwd(), "public/fonts/ClashDisplay-Semibold.ttf")),
         ]);
         return { cabinetGrotesk, clashDisplay };
     } catch (error) {
@@ -76,8 +74,8 @@ const styles = {
         zIndex: "1",
     },
     image: {
-        width: "140px",
-        height: "140px",
+        width: 140,
+        height: 140,
         borderRadius: "24px",
         border: "4px solid #e5e5e5",
         objectFit: "cover",
@@ -121,7 +119,7 @@ export default async function Image() {
                         <div style={styles.wrapper}>
                             {imageUrl && (
                                 <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt="Blog" style={styles.image} />
+                                    <img src={imageUrl} alt="Blog" style={styles.image} width={140} height={140} />
                                 </div>
                             )}
                             <div style={styles.mainContainer}>
