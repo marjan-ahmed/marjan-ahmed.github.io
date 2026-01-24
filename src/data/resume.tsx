@@ -18,7 +18,7 @@ export const DATA = {
   summary:
     "With over **2 years of experience** as a Full-Stack Developer, I specialize in building responsive web applications, collaborating with cross-functional teams, and integrating AI-driven solutions—including **Agentic AI**. I leverage modern frameworks like [Next.js](https://nextjs.org) and [React](https://react.dev), headless CMS platforms like [Sanity](https://sanity.io), and am currently expanding my expertise in the [OpenAI Agent SDK](https://platform.openai.com). I'm passionate about delivering scalable, innovative projects that create real impact.",
   // avatarUrl: getAssetPath("1769214012687.jpg"),
-  avatarUrl: getAssetPath("file_00000000dc9072078ed63f6e14b18684.png"),
+  avatarUrl: getAssetPath("1769290774696.jpg"),
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
