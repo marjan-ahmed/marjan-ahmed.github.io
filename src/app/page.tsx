@@ -4,6 +4,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
@@ -18,10 +19,13 @@ export default function Page() {
     <main className="min-h-dvh flex flex-col gap-14 relative">
       {/* Space Shooter Background Decoration */}
       <div className="fixed top-0 right-0 w-full h-48 md:h-64 pointer-events-none overflow-hidden z-0 opacity-10 dark:opacity-5">
-        <img
+        <Image
           src="/marjan-ahmed-space-shooter.gif"
           alt=""
-          className="w-full h-full object-cover object-center"
+          fill
+          sizes="100vw"
+          unoptimized
+          className="object-cover object-center"
           aria-hidden="true"
         />
       </div>
