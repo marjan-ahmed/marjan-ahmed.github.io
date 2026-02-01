@@ -1,6 +1,4 @@
-"use client"; 
 /* eslint-disable @next/next/no-img-element */
-import { useRef } from "react";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -11,22 +9,11 @@ import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight, Volume2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
-  // Ref for audio
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  // Function to play audio
-  const playNameSound = () => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play();
-    }
-  };
-
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
       {/* Hero Section */}
@@ -43,15 +30,6 @@ export default function Page() {
                   yOffset={8}
                   text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
                 />
-
-                {/* Audio Icon */}
-                <button
-                  onClick={playNameSound}
-                  aria-label="Play name pronunciation"
-                  className="text-muted-foreground hover:text-foreground transition-colors hover:scale-110 active:scale-95"
-                >
-                  <Volume2 className="h-6 w-6" />
-                </button>
               </div>
 
               {/* Description */}
@@ -71,9 +49,6 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
-
-        {/* Audio element */}
-        <audio ref={audioRef} src="/sounds/marjan.aac" preload="auto" />
       </section>
       {/* About Section */}
       <section id="about">
@@ -92,11 +67,11 @@ export default function Page() {
       {/* Space Shooter Section */}
       <section id="space-shooter">
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
-          <img
-            src="https://marjan-ahmed.github.io/portfolio/marjan-ahmed-space-shooter.gif"
-            alt="Space Shooter Game"
-            className="w-full max-w-4xl border rounded-sm shadow-xl"
-          />
+        <img
+  src="https://marjan-ahmed.github.io/portfolio/marjan-ahmed-space-shooter.gif"
+  alt="Space Shooter Game"
+  className="w-full max-w-full sm:max-w-4xl mx-auto border rounded-sm shadow-xl"
+/>
         </BlurFade>
       </section>
 
