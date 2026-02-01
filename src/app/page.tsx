@@ -57,19 +57,13 @@ export default function Page() {
       </section>
       {/* Space Shooter Section */}
 <section id="space-shooter">
-  <div className="flex flex-col items-center gap-y-6">
-    <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
-      <h2 className="text-xl font-bold">Featured Project</h2>
-    </BlurFade>
-
     <BlurFade delay={BLUR_FADE_DELAY * 5}>
       <img
         src="https://marjan-ahmed.github.io/portfolio/marjan-ahmed-space-shooter.gif"
         alt="Space Shooter Game"
-        className="w-full max-w-4xl rounded-2xl border shadow-2xl"
+        className="w-full max-w-4xl border shadow-2xl"
       />
     </BlurFade>
-  </div>
 </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
