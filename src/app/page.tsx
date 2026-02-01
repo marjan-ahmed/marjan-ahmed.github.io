@@ -23,6 +23,7 @@ export default function Page() {
           src="/marjan-ahmed-space-shooter.gif"
           alt=""
           fill
+          sizes="100vw"
           unoptimized
           className="object-cover object-center"
           aria-hidden="true"
