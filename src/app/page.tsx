@@ -30,7 +30,7 @@ export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
       {/* Hero Section */}
-      <section id="hero" className="relative z-10">
+     <section id="hero" className="relative z-10">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between items-center md:items-start">
             {/* Left: Name + Description */}
@@ -39,10 +39,9 @@ export default function Page() {
                 {/* Name */}
                 <BlurFadeText
                   delay={BLUR_FADE_DELAY}
-                  className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl cursor-pointer"
+                  className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                   yOffset={8}
                   text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-                  onClick={playNameSound}
                 />
 
                 {/* Audio Icon */}
@@ -76,7 +75,6 @@ export default function Page() {
         {/* Audio element */}
         <audio ref={audioRef} src="/sounds/marjan.aac" preload="auto" />
       </section>
-
       {/* About Section */}
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
