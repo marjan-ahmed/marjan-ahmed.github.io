@@ -16,16 +16,6 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
-      {/* Space Shooter Background Decoration */}
-      <div className="fixed top-0 right-0 w-full h-48 md:h-64 pointer-events-none overflow-hidden z-0 opacity-10 dark:opacity-5">
-        <img
-          src="https://marjan-ahmed.github.io/portfolio/marjan-ahmed-space-shooter.gif"
-          alt=""
-          className="w-full h-full object-cover object-center"
-          aria-hidden="true"
-        />
-      </div>
-
       <section id="hero" className="relative z-10">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
@@ -65,6 +55,22 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+      {/* Space Shooter Section */}
+<section id="space-shooter">
+  <div className="flex flex-col items-center gap-y-6">
+    <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
+      <h2 className="text-xl font-bold">Featured Project</h2>
+    </BlurFade>
+
+    <BlurFade delay={BLUR_FADE_DELAY * 5}>
+      <img
+        src="https://marjan-ahmed.github.io/portfolio/marjan-ahmed-space-shooter.gif"
+        alt="Space Shooter Game"
+        className="w-full max-w-4xl rounded-2xl border shadow-2xl"
+      />
+    </BlurFade>
+  </div>
+</section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
