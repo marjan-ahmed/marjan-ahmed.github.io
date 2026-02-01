@@ -16,7 +16,17 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
-      <section id="hero">
+      {/* Space Shooter Background Decoration */}
+      <div className="fixed top-0 right-0 w-full h-48 md:h-64 pointer-events-none overflow-hidden z-0 opacity-10 dark:opacity-5">
+        <img
+          src="/marjan-ahmed-space-shooter.gif"
+          alt=""
+          className="w-full h-full object-cover object-center"
+          aria-hidden="true"
+        />
+      </div>
+
+      <section id="hero" className="relative z-10">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1">
