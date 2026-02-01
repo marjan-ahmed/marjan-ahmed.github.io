@@ -1,3 +1,4 @@
+"use client"; 
 /* eslint-disable @next/next/no-img-element */
 import { useRef } from "react";
 import BlurFade from "@/components/magicui/blur-fade";
