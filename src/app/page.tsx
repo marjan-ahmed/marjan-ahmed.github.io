@@ -19,7 +19,7 @@ export default function Page() {
       {/* Space Shooter Background Decoration */}
       <div className="fixed top-0 right-0 w-full h-48 md:h-64 pointer-events-none overflow-hidden z-0 opacity-10 dark:opacity-5">
         <img
-          src="/marjan-ahmed-space-shooter.gif"
+          src="https://marjan-ahmed.github.io/portfolio/marjan-ahmed-space-shooter.gif"
           alt=""
           className="w-full h-full object-cover object-center"
           aria-hidden="true"
