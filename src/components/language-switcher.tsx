@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { languages } from "@/lib/constants";
+import { saveLocale } from "@/lib/locale-preference";
 import { cn } from "@/lib/utils";
 import { Check, GlobeIcon, XIcon } from "lucide-react";
 import { usePathname, useRouter } from 'next/navigation';
@@ -22,6 +23,7 @@ export function LanguageSwitcher() {
   const t = useTranslations();
 
   const changeLocale = (newLocale: string) => {
+    saveLocale(newLocale);
     const segments = pathname.split('/');
     if (segments[1] && languages.some(lang => lang.locale === segments[1])) {
       segments[1] = newLocale;

@@ -29,6 +29,7 @@ import { DATA } from "@/data/resume";
 import { SECTIONS } from "@/data/nav";
 import { languages } from "@/lib/constants";
 import { useCopy } from "@/lib/hooks";
+import { saveLocale } from "@/lib/locale-preference";
 import { cn } from "@/lib/utils";
 
 /* ------------------------------------------------------------------ */
@@ -104,6 +105,7 @@ export function CommandPaletteProvider({
 
     const switchLocale = (next: string) => () => {
       close();
+      saveLocale(next);
       const segments = pathname.split("/");
       if (segments[1] && languages.some((l) => l.locale === segments[1])) {
         segments[1] = next;
