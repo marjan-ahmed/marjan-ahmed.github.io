@@ -1,23 +1,31 @@
 <div align="center">
-<img alt="Marjan Ahmed Portfolio" src="/marjan-avatar.png" width="120" style="border-radius: 50%">
+<img alt="Marjan Ahmed Portfolio" src="/marjan-avatar.jpg" width="120" style="border-radius: 50%">
 
-# Marjan Ahmed - Portfolio
+# Muhammad Marjan Ahmed — Portfolio
 
-**Full-Stack Developer & Agentic AI Enthusiast**
+**Full-Stack Developer & Agentic AI Engineer**
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarjan-ahmed%2Fportfolio)
 
 </div>
 
-Built with Next.js, [shadcn/ui](https://ui.shadcn.com/), and [Magic UI](https://magicui.design/), deployed on Vercel.
+A case-study-driven portfolio built as a terminal/dossier-style dashboard rather than a resume-card
+layout — deployment write-ups, an architecture diagram per project, a command palette (`⌘K` / `Ctrl+K`),
+and a proof strip of checkable numbers instead of adjectives. Built with Next.js 16 (App Router,
+Turbopack), TypeScript, and Tailwind CSS v4, statically exported for GitHub Pages.
 
 ## Features
 
-- Single config file setup at [src/data/resume.tsx](./src/data/resume.tsx)
-- Built with Next.js 14, React, TypeScript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Integrated blog with MDX support
-- Responsive design for all devices
-- Optimized for performance
+- **Fully internationalized** — English, French, German, Japanese, Arabic, and Urdu via
+  [`next-intl`](https://next-intl.dev/), with automatic RTL layout for ar/ur
+- **Deployment case studies** — each shipped project told as Friction → Constraint → System → Impact,
+  with a real architecture diagram and screenshot, not just a description
+- **Command palette** — jump to any section, copy contact info, switch theme or language, all from the
+  keyboard
+- Config-driven content: identity/work/projects in [`src/data/resume.tsx`](./src/data/resume.tsx),
+  case studies in [`src/data/deployments.ts`](./src/data/deployments.ts), translated copy in
+  [`locales/`](./locales)
+- Static export, deployable to GitHub Pages or Vercel
 
 ## Getting Started
 
@@ -45,7 +53,9 @@ Built with Next.js, [shadcn/ui](https://ui.shadcn.com/), and [Magic UI](https://
    pnpm dev
    ```
 
-5. Edit [src/data/resume.tsx](./src/data/resume.tsx) to customize content
+5. Edit [`src/data/resume.tsx`](./src/data/resume.tsx) and
+   [`src/data/deployments.ts`](./src/data/deployments.ts) to customize content, and the matching keys in
+   [`locales/en.ts`](./locales/en.ts) (mirror into the other locale files to keep translations in sync)
 
 # License
 
