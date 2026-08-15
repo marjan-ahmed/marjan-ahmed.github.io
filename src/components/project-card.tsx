@@ -7,12 +7,14 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
+import { useTranslations } from 'next-intl';
 
 function ProjectImage({ src, alt }: { src: string; alt: string }) {
   const [imageError, setImageError] = useState(false);
+  const t = useTranslations('');
 
   if (!src || imageError) {
-    return <div className="w-full h-48 bg-muted" />;
+    return <div className="w-full h-48 bg-muted" aria-label={t("projects.imageAlt", {title: alt})} />;
   }
 
   return (
@@ -54,6 +56,7 @@ export function ProjectCard({
   links,
   className,
 }: Props) {
+  const t = useTranslations('');
   return (
     <div
       className={cn(
@@ -80,7 +83,7 @@ export function ProjectCard({
           ) : image ? (
             <ProjectImage src={image} alt={title} />
           ) : (
-            <div className="w-full h-48 bg-muted" />
+            <div className="w-full h-48 bg-muted" aria-label={t("projects.imageAlt", {title})} />
           )}
         </Link>
         {links && links.length > 0 && (
@@ -116,7 +119,7 @@ export function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            aria-label={`Open ${title}`}
+            aria-label={t("projects.openLink", {title})}
           >
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>

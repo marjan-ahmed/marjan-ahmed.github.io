@@ -1,49 +1,90 @@
-import Link from "next/link";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+'use client';
+
+import { useTranslations } from "next-intl";
+import { ArrowUpRight, Mail } from "lucide-react";
+
 import { DATA } from "@/data/resume";
+import { Icons } from "@/components/icons";
+import { cn } from "@/lib/utils";
+import { Container, Reveal, SectionHeader } from "@/components/site/primitives";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
 export default function ContactSection() {
+  const t = useTranslations();
+
   return (
-    <div className="border rounded-xl p-10 relative">
-      <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
-        <span className="text-background text-sm font-medium">Contact</span>
-      </div>
-      <div className="absolute inset-0 top-0 left-0 right-0 h-1/2 rounded-xl overflow-hidden">
-        <FlickeringGrid
-          className="h-full w-full"
-          squareSize={2}
-          gridGap={2}
-          style={{
-            maskImage: "linear-gradient(to bottom, black, transparent)",
-            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-          }}
+    <section id="contact" className="py-20 sm:py-28">
+      <Container className="flex flex-col gap-10">
+        <SectionHeader
+          index="005"
+          eyebrow={t("nav.contact")}
+          title={t("contact.letsConnect")}
+          lede={t("contact.description", {
+            email: t("contact.emailLink"),
+            linkedin: t("contact.linkedinLink"),
+          })}
         />
-      </div>
-      <div className="relative flex flex-col items-center gap-4 text-center">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Let&apos;s Connect
-        </h2>
-        <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Have a project in mind or want to collaborate? Feel free to reach out via{" "}
-          <Link
-            href={`mailto:${DATA.contact.email}`}
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-          >
-            email
-          </Link>{" "}
-          or connect with me on{" "}
-          <Link
-            href={DATA.contact.social.LinkedIn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-          >
-            LinkedIn
-          </Link>
-          . I&apos;m open to freelance opportunities and full-time positions.
-        </p>
-      </div>
-    </div>
+
+        <Reveal index={2}>
+          <div className="relative overflow-hidden rounded-2xl border border-rule bg-card/60 p-8 backdrop-blur-sm sm:p-10">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 blueprint opacity-20"
+            />
+            <FlickeringGrid
+              className="pointer-events-none absolute inset-0 h-full w-full"
+              squareSize={2}
+              gridGap={2}
+              style={{
+                maskImage: "radial-gradient(60% 85% at 50% 50%, black, transparent)",
+                WebkitMaskImage: "radial-gradient(60% 85% at 50% 50%, black, transparent)",
+              }}
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-24 start-1/2 size-72 -translate-x-1/2 rounded-full bg-signal/[0.08] blur-3xl"
+            />
+
+            <div className="relative flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={`mailto:${DATA.contact.email}`}
+                data-focus-custom
+                className={cn(
+                  "group inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3",
+                  "text-sm font-medium text-background",
+                  "transition-transform duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]",
+                  "hover:scale-[1.03] active:scale-[0.97]",
+                  "focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                )}
+              >
+                <Mail aria-hidden className="size-4" />
+                {DATA.contact.email}
+              </a>
+
+              <a
+                href={DATA.contact.social.LinkedIn.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-focus-custom
+                className={cn(
+                  "group inline-flex items-center gap-2 rounded-full border border-rule bg-surface px-5 py-3",
+                  "text-sm font-medium text-muted-foreground",
+                  "transition-all duration-200 ease-[cubic-bezier(0.4,0,0.2,1)]",
+                  "hover:border-signal/50 hover:text-foreground active:scale-[0.97]",
+                  "focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                )}
+              >
+                <Icons.linkedin className="size-4" />
+                {t("contact.linkedinLink")}
+                <ArrowUpRight
+                  aria-hidden
+                  className="size-3.5 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
+                />
+              </a>
+            </div>
+          </div>
+        </Reveal>
+      </Container>
+    </section>
   );
 }
-

@@ -1,12 +1,17 @@
 import { withContentCollections } from "@content-collections/next";
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+
+const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  ...(isProd ? { output: 'export' } : {}),
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  basePath: isProd ? '/portfolio' : '',
   reactStrictMode: true,
   async headers() {
     return [
@@ -35,5 +40,5 @@ const nextConfig = {
   },
 };
 
-// withContentCollections must be the outermost plugin
-export default withContentCollections(nextConfig);
+// Apply plugins in the correct order - withNextIntl must wrap withContentCollections
+export default withContentCollections(withNextIntl(nextConfig));
