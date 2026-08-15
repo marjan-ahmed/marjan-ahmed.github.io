@@ -3,19 +3,26 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
-// GitHub Pages needs a static export (no Node server available there); Vercel doesn't.
-// Vercel sets `VERCEL=1` during its builds, so any other production build (e.g.
-// `next build` run locally, or in the GitHub Pages deploy workflow) is treated as a
-// GitHub Pages export. Both hosts now serve this app at the domain root — this repo
-// is `marjan-ahmed.github.io`, GitHub Pages' user-site convention — so no basePath
-// is needed either way.
+// GitHub Pages needs a static export (no Node server available there) and this repo
+// (marjan-ahmed/portfolio, a project page rather than a <user>.github.io user page)
+// is served under a /portfolio subpath. Vercel needs neither — it serves at the
+// domain root and supports full SSR. Vercel sets `VERCEL=1` during its builds, so
+// any other production build (e.g. `next build` run locally, or in the GitHub Pages
+// deploy workflow) is treated as a GitHub Pages export.
 const isGithubPagesExport = process.env.NODE_ENV === 'production' && !process.env.VERCEL;
+const basePath = isGithubPagesExport ? '/portfolio' : '';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   ...(isGithubPagesExport ? { output: 'export' } : {}),
   images: {
     unoptimized: true,
+  },
+  basePath,
+  // Inlined into both server and client bundles so `getAssetPath` resolves the same
+  // way everywhere — `process.env.VERCEL` itself is not available client-side.
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
   reactStrictMode: true,
   async headers() {

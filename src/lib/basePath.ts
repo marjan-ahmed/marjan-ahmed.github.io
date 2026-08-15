@@ -1,10 +1,12 @@
 /**
- * Normalizes a public asset path to start with exactly one leading slash.
- * Both deploy targets (Vercel and marjan-ahmed.github.io) serve this app at the
- * domain root, so no basePath prefix is needed — this just guards against
- * accidental double slashes from callers that already include a leading one.
+ * Prepends the deploy target's basePath to a public asset path.
+ * Set by next.config.mjs — '/portfolio' for the GitHub Pages export (this repo is a
+ * project page, not a marjan-ahmed.github.io user page), empty on Vercel. Inlined at
+ * build time, so this resolves consistently whether it runs on the server or in the
+ * client bundle.
  */
 export function getAssetPath(path: string): string {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  return `/${cleanPath}`;
+  return `${basePath}/${cleanPath}`;
 }
