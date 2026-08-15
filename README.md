@@ -5,7 +5,7 @@
 
 **Full-Stack Developer & Agentic AI Engineer**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarjan-ahmed%2Fportfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarjan-ahmed%2Fmarjan-ahmed.github.io)
 
 </div>
 
@@ -32,13 +32,13 @@ Turbopack), TypeScript, and Tailwind CSS v4, statically exported for GitHub Page
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/marjan-ahmed/portfolio
+   git clone https://github.com/marjan-ahmed/marjan-ahmed.github.io
    ```
 
 2. Navigate to the project:
 
    ```bash
-   cd portfolio
+   cd marjan-ahmed.github.io
    ```
 
 3. Install dependencies:

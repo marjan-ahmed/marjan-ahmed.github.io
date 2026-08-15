@@ -1,13 +1,10 @@
 /**
- * Utility to prepend the basePath to asset URLs
- * This is needed for GitHub Pages deployment with a custom basePath
+ * Normalizes a public asset path to start with exactly one leading slash.
+ * Both deploy targets (Vercel and marjan-ahmed.github.io) serve this app at the
+ * domain root, so no basePath prefix is needed — this just guards against
+ * accidental double slashes from callers that already include a leading one.
  */
 export function getAssetPath(path: string): string {
-  // Set by next.config.mjs — empty on Vercel (served at the domain root), '/portfolio'
-  // for GitHub Pages exports. Inlined at build time, so this resolves consistently
-  // whether it runs on the server or in the client bundle.
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
-  // Remove leading slash from path if present to avoid double slashes
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  return `${basePath}/${cleanPath}`;
+  return `/${cleanPath}`;
 }
