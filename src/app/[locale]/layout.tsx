@@ -31,11 +31,28 @@ export function generateStaticParams() {
   return languages.map(l => ({ locale: l.locale }));
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
-  title: { default: DATA.name, template: `%s | ${DATA.name}` },
-  description: DATA.description,
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    metadataBase: new URL(DATA.url),
+    title: { default: DATA.name, template: `%s | ${DATA.name}` },
+    description: DATA.description,
+    alternates: {
+      canonical: `/${locale}`,
+      // Tells Google these are the same page in different languages, not duplicate
+      // content — required for a multilingual site to rank correctly per-language.
+      languages: Object.fromEntries([
+        ...routing.locales.map((l) => [l, `/${l}`]),
+        ["x-default", `/${routing.defaultLocale}`],
+      ]),
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -57,6 +74,28 @@ export default async function LocaleLayout({
 
   const isRTL = locale === 'ar' || locale === 'ur';
 
+  // Tells Google this page is about a specific person — the `sameAs` links let it
+  // connect this site to the same identity on GitHub/LinkedIn/X, which is what
+  // personal name searches and Knowledge Panels key off of.
+  const personJsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: DATA.name,
+    url: DATA.url,
+    image: new URL(DATA.avatarUrl, DATA.url).toString(),
+    jobTitle: 'Full-Stack Developer & Agentic AI Engineer',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Karachi',
+      addressCountry: 'PK',
+    },
+    sameAs: [
+      DATA.contact.social.GitHub.url,
+      DATA.contact.social.LinkedIn.url,
+      DATA.contact.social.X.url,
+    ],
+  }).replace(/</g, '\\u003c');
+
   return (
     <html lang={locale} dir={isRTL ? 'rtl' : 'ltr'} suppressHydrationWarning>
       <body
@@ -66,6 +105,11 @@ export default async function LocaleLayout({
           geistMono.variable
         )}
       >
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: personJsonLd }}
+        />
         {/* Pass locale and messages to I18nProvider */}
         <I18nProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="light">
