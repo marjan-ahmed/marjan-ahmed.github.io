@@ -61,7 +61,7 @@ export function HeroConsole() {
             </div>
 
             <h1
-              className="animate-rise-in mt-6 border-s-2 border-signal ps-5 text-balance text-[2.1rem] font-semibold leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-6xl"
+              className="animate-rise-in mt-6 border-s-2 border-signal ps-5 text-balance text-[2.5rem] font-semibold leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-6xl"
               style={{ animationDelay: "60ms" }}
             >
               {t("headline")}
