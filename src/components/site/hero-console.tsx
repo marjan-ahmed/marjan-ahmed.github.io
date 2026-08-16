@@ -148,9 +148,9 @@ export function HeroConsole() {
                 </div>
 
                 <div className="min-w-0">
-                  <p className="truncate text-base font-semibold tracking-tight">
+                  <h2 className="truncate text-base font-semibold tracking-tight">
                     {DATA.name}
-                  </p>
+                  </h2>
                   <p className="mono-label mt-1.5 text-muted-foreground">
                     {t("card.role")}
                   </p>

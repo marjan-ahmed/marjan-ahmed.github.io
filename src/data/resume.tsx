@@ -14,7 +14,7 @@ export const DATA = {
   location: "Karachi, Pakistan",
   locationLink: "https://www.google.com/maps/place/karachi",
   description:
-    "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
+    "Muhammad Marjan Ahmed — Full-Stack Developer & Agentic AI Engineer in Karachi, Pakistan. Building production web apps and shipped AI agent systems.",
   summary:
     "17, coding since Class 8. I build production web apps and AI agents that solve real problems. At Naxasware, I shipped full-stack features across the MERN stack for a startup. At Reintechs, I built 5-7 client websites end-to-end, including a Next.js + headless WooCommerce storefront. I built an open-source CLI tool (Gemini Starter Agent) that crossed 3,723+ PyPI downloads. Built DocSamajh AI for the LandingAI Financial Hackathon — an invoice-to-PO reconciliation system that cut manual effort by 70%. Currently building AI-native learning platforms with RAG chatbots and multi-agent systems. I picked Next.js, FastAPI, OpenAI Agents SDK, and MCP because they ladder toward my goal of building an IT agency that serves international clients. I think in systems, not one-off builds.",
   avatarUrl: getAssetPath("marjan-avatar.jpg"),
