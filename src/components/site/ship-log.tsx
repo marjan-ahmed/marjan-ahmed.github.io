@@ -47,7 +47,7 @@ export function ShipLog() {
               <div className="group relative flex gap-4 py-4 ps-6 sm:ps-0">
                 {/* Date column — its own lane on desktop. */}
                 <time
-                  className="mono-label hidden w-22 shrink-0 pt-1 text-end text-muted-foreground/70 sm:block"
+                  className="mono-label hidden w-22 shrink-0 pt-1 text-end text-muted-foreground sm:block"
                   dateTime={entry.date}
                 >
                   {entry.date}
@@ -76,7 +76,7 @@ export function ShipLog() {
                       {t(`kinds.${entry.kind}`)}
                     </span>
                     <time
-                      className="mono-label text-muted-foreground/70 sm:hidden"
+                      className="mono-label text-muted-foreground sm:hidden"
                       dateTime={entry.date}
                     >
                       {entry.date}

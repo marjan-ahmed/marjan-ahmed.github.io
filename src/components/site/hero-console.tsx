@@ -24,7 +24,7 @@ function Reticle({ className }: { className: string }) {
 function MetaRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex items-baseline justify-between gap-4 py-2.5">
-      <dt className="mono-label shrink-0 text-muted-foreground/70">{label}</dt>
+      <dt className="mono-label shrink-0 text-muted-foreground">{label}</dt>
       <dd className="min-w-0 truncate text-end font-mono text-xs text-foreground">
         {children}
       </dd>
@@ -61,7 +61,7 @@ export function HeroConsole() {
             </div>
 
             <h1
-              className="animate-rise-in mt-6 border-s-2 border-signal ps-5 text-balance text-[2.5rem] font-semibold leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-6xl"
+              className="animate-rise-in mt-6 border-s-2 border-signal ps-5 text-balance text-[2.5rem] font-semibold leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-[3.5rem]"
               style={{ animationDelay: "60ms" }}
             >
               {t("headline")}

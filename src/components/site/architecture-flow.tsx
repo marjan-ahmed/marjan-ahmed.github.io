@@ -88,7 +88,7 @@ export function ArchitectureFlow({
 
   return (
     <figure className={cn("m-0", className)}>
-      <figcaption className="mono-label mb-4 text-muted-foreground/70">
+      <figcaption className="mono-label mb-4 text-muted-foreground">
         {t("architecture")}
       </figcaption>
 

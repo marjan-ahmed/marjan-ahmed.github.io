@@ -53,9 +53,11 @@
   --radius: 0.625rem;
 
   /* Signal = "this shipped / this is live / this is the impact".
-     One accent, used only where meaning demands it. */
-  --signal: oklch(0.585 0.155 41);
-  --signal-soft: oklch(0.585 0.155 41 / 0.1);
+     One accent, used only where meaning demands it.
+     Lightness tuned so mono-label-sized text clears WCAG AA (4.5:1) at full
+     opacity — the untuned oklch(0.585) only reached ~3.8-4.4:1. */
+  --signal: oklch(0.5 0.155 41);
+  --signal-soft: oklch(0.5 0.155 41 / 0.1);
   --signal-foreground: oklch(0.99 0 0);
   --rule: oklch(0.905 0.002 60);
   --surface: oklch(0.985 0.002 70);
@@ -71,7 +73,10 @@
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  /* Darkened from 0.556 — at that lightness, even full-opacity small text
+     (mono-labels, captions) only cleared ~4.1:1 against the near-white
+     background, short of WCAG AA's 4.5:1. */
+  --muted-foreground: oklch(0.42 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);

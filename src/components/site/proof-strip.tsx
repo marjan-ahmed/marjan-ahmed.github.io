@@ -67,7 +67,7 @@ export function ProofStrip() {
                 <span className="mono-label mt-2.5 text-muted-foreground">
                   {label}
                 </span>
-                <span className="mt-1.5 text-xs leading-snug text-muted-foreground/70">
+                <span className="mt-1.5 text-xs leading-snug text-muted-foreground">
                   {note}
                 </span>
               </>

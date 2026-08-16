@@ -388,7 +388,7 @@ export function CommandPaletteProvider({
                   return (
                     <li key={item.id}>
                       {showGroup ? (
-                        <p className="mono-label px-3 pb-1.5 pt-3 text-muted-foreground/60">
+                        <p className="mono-label px-3 pb-1.5 pt-3 text-muted-foreground">
                           {item.group}
                         </p>
                       ) : null}
@@ -420,7 +420,7 @@ export function CommandPaletteProvider({
                             : item.label}
                         </span>
                         {item.hint ? (
-                          <span className="hidden shrink-0 font-mono text-[11px] text-muted-foreground/60 sm:block">
+                          <span className="hidden shrink-0 font-mono text-[11px] text-muted-foreground sm:block">
                             {item.hint}
                           </span>
                         ) : null}
@@ -439,13 +439,13 @@ export function CommandPaletteProvider({
 
             {/* Footer legend */}
             <div className="flex items-center gap-4 border-t border-rule px-4 py-2.5">
-              <span className="mono-label flex items-center gap-1.5 text-muted-foreground/60">
+              <span className="mono-label flex items-center gap-1.5 text-muted-foreground">
                 <kbd className="rounded border border-rule bg-surface px-1 py-0.5">
                   ↑↓
                 </kbd>
                 {t("legend.move")}
               </span>
-              <span className="mono-label flex items-center gap-1.5 text-muted-foreground/60">
+              <span className="mono-label flex items-center gap-1.5 text-muted-foreground">
                 <kbd className="rounded border border-rule bg-surface px-1 py-0.5">
                   ↵
                 </kbd>
@@ -453,7 +453,7 @@ export function CommandPaletteProvider({
               </span>
               <a
                 href={DATA.url}
-                className="mono-label ms-auto hidden items-center gap-1 text-muted-foreground/60 hover:text-foreground sm:flex"
+                className="mono-label ms-auto hidden items-center gap-1 text-muted-foreground hover:text-foreground sm:flex"
               >
                 {DATA.initials}
                 <ArrowUpRight aria-hidden className="size-3" />

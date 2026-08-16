@@ -53,6 +53,9 @@ export interface Deployment {
   award?: string;
   /** Real screenshot of the shipped product — shown as evidence, not decoration. */
   image?: string;
+  /** Screenshot's real pixel dimensions, so the browser can reserve its aspect ratio before it loads (avoids layout shift). */
+  imageWidth?: number;
+  imageHeight?: number;
   stack: string[];
   arch: ArchNode[];
   metrics: Metric[];
@@ -67,6 +70,8 @@ export const DEPLOYMENTS: Deployment[] = [
     year: "Dec 2025",
     status: "shipped",
     image: getAssetPath("projects/docsamajh-ui.png"),
+    imageWidth: 2560,
+    imageHeight: 1600,
     stack: [
       "Python",
       "LandingAI ADE",
@@ -96,6 +101,8 @@ export const DEPLOYMENTS: Deployment[] = [
     year: "2025 — present",
     status: "live",
     image: getAssetPath("projects/textbook-hero.png"),
+    imageWidth: 2560,
+    imageHeight: 1600,
     stack: [
       "Docusaurus",
       "FastAPI",
@@ -129,6 +136,8 @@ export const DEPLOYMENTS: Deployment[] = [
     year: "2025",
     status: "shipped",
     image: getAssetPath("projects/ai-vault.png"),
+    imageWidth: 1312,
+    imageHeight: 816,
     stack: ["Python", "MCP", "Claude Code", "Obsidian", "FastAPI"],
     arch: [
       { id: "watch", label: "Signal watchers", detail: "Gmail · WhatsApp · FS", kind: "source" },
@@ -151,6 +160,8 @@ export const DEPLOYMENTS: Deployment[] = [
     year: "Sep 2025",
     status: "live",
     image: getAssetPath("projects/gemini-pypi.png"),
+    imageWidth: 2560,
+    imageHeight: 1600,
     stack: ["Python", "OpenAI Agents SDK", "Gemini API", "CLI", "PyPI"],
     arch: [
       { id: "cmd", label: "One command", detail: "pip install · run", kind: "source" },
@@ -180,6 +191,8 @@ export const DEPLOYMENTS: Deployment[] = [
     status: "shipped",
     award: "Featured — GIAIC Demo Day",
     image: getAssetPath("projects/hekto-store.png"),
+    imageWidth: 2412,
+    imageHeight: 1600,
     stack: ["Next.js 14", "TypeScript", "Sanity CMS", "Clerk", "Redux", "ShipEngine", "Tailwind CSS"],
     arch: [
       { id: "sanity", label: "Product catalog", detail: "Sanity CMS", kind: "source" },

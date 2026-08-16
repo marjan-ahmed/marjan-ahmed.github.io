@@ -27,7 +27,7 @@ function AnatomyLegend() {
           {i < beats.length - 1 ? (
             <span
               aria-hidden
-              className="mono-label text-muted-foreground/40 rtl:rotate-180"
+              className="mono-label text-muted-foreground rtl:rotate-180"
             >
               →
             </span>

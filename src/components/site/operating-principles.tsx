@@ -62,7 +62,7 @@ export function OperatingPrinciples() {
                 </p>
 
                 <p className="mt-auto flex items-center gap-2 pt-3">
-                  <span className="mono-label text-muted-foreground/50">
+                  <span className="mono-label text-muted-foreground">
                     {t("receipt")}
                   </span>
                   <span className="font-mono text-[11px] text-foreground/80">
@@ -83,7 +83,7 @@ export function OperatingPrinciples() {
               It gets the closing thought rather than dead space. */}
           <li className="bg-background">
             <div className="flex h-full items-end p-6 sm:p-7">
-              <p className="max-w-xs text-pretty font-mono text-xs leading-relaxed text-muted-foreground/60">
+              <p className="max-w-xs text-pretty font-mono text-xs leading-relaxed text-muted-foreground">
                 {t("closer")}
               </p>
             </div>

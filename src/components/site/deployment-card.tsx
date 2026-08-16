@@ -29,7 +29,7 @@ function Beat({
         <span
           className={cn(
             "mono-label",
-            tone === "signal" ? "text-signal" : "text-muted-foreground/70"
+            tone === "signal" ? "text-signal" : "text-muted-foreground"
           )}
         >
           {label}
@@ -71,7 +71,7 @@ export function DeploymentCard({
       {/* Index rail — turns a list of cards into a numbered dossier. */}
       <span
         aria-hidden
-        className="mono-label absolute end-4 top-5 text-muted-foreground/35 sm:end-6"
+        className="mono-label absolute end-4 top-5 text-muted-foreground sm:end-6"
       >
         D-{String(index + 1).padStart(2, "0")}
       </span>
@@ -86,10 +86,10 @@ export function DeploymentCard({
                 {t(`status.${d.status}`)}
               </span>
             </span>
-            <span aria-hidden className="text-muted-foreground/30">
+            <span aria-hidden className="text-muted-foreground">
               ·
             </span>
-            <span className="mono-label text-muted-foreground/70">{d.year}</span>
+            <span className="mono-label text-muted-foreground">{d.year}</span>
           </div>
 
           <h3 className="text-balance text-xl font-semibold tracking-tight sm:text-2xl">
@@ -126,7 +126,7 @@ export function DeploymentCard({
               <span className="numeric text-base font-medium tracking-tight sm:text-lg">
                 {m.value}
               </span>
-              <span className="mono-label mt-1.5 text-muted-foreground/70">
+              <span className="mono-label mt-1.5 text-muted-foreground">
                 {m.label}
               </span>
             </div>
@@ -176,6 +176,8 @@ export function DeploymentCard({
                 <img
                   src={d.image}
                   alt={d.name}
+                  width={d.imageWidth}
+                  height={d.imageHeight}
                   loading="lazy"
                   className="h-auto w-full object-cover"
                 />
@@ -186,7 +188,7 @@ export function DeploymentCard({
 
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2.5">
-                <span className="mono-label text-muted-foreground/70">
+                <span className="mono-label text-muted-foreground">
                   {t("beats.stack")}
                 </span>
                 <span aria-hidden className="h-px flex-1 bg-rule" />
