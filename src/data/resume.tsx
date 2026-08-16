@@ -10,7 +10,7 @@ import { getAssetPath } from "@/lib/basePath";
 export const DATA = {
   name: "Muhammad Marjan Ahmed",
   initials: "MA",
-  url: "https://marjan-ahmed.github.io/portfolio",
+  url: "https://marjanahmed.vercel.app",
   location: "Karachi, Pakistan",
   locationLink: "https://www.google.com/maps/place/karachi",
   description:
