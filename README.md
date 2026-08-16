@@ -12,20 +12,29 @@
 A case-study-driven portfolio built as a terminal/dossier-style dashboard rather than a resume-card
 layout — deployment write-ups, an architecture diagram per project, a command palette (`⌘K` / `Ctrl+K`),
 and a proof strip of checkable numbers instead of adjectives. Built with Next.js 16 (App Router,
-Turbopack), TypeScript, and Tailwind CSS v4, statically exported for GitHub Pages.
+Turbopack), TypeScript, and Tailwind CSS v4.
+
+**Live:** [marjanahmed.vercel.app](https://marjanahmed.vercel.app) (canonical) ·
+[marjan-ahmed.github.io/portfolio](https://marjan-ahmed.github.io/portfolio) (mirror)
 
 ## Features
 
 - **Fully internationalized** — English, French, German, Japanese, Arabic, and Urdu via
-  [`next-intl`](https://next-intl.dev/), with automatic RTL layout for ar/ur
+  [`next-intl`](https://next-intl.dev/), with automatic RTL layout for ar/ur, and a first-visit
+  browser-language auto-detect that only ever runs once per visitor
 - **Deployment case studies** — each shipped project told as Friction → Constraint → System → Impact,
   with a real architecture diagram and screenshot, not just a description
 - **Command palette** — jump to any section, copy contact info, switch theme or language, all from the
   keyboard
+- **SEO-complete** — Person structured data (JSON-LD), per-locale hreflang + canonical tags, sitemap.xml,
+  robots.txt
+- **Accessible** — 96/100 Lighthouse (the remaining points are one intentionally-decorative,
+  aria-hidden background watermark that a WCAG-compliant fix would have to make solid and un-ghostlike)
 - Config-driven content: identity/work/projects in [`src/data/resume.tsx`](./src/data/resume.tsx),
   case studies in [`src/data/deployments.ts`](./src/data/deployments.ts), translated copy in
   [`locales/`](./locales)
-- Static export, deployable to GitHub Pages or Vercel
+- Static export, deployable to GitHub Pages or Vercel — both hosted simultaneously (see
+  [`next.config.mjs`](./next.config.mjs) for how basePath/output are switched per target)
 
 ## Getting Started
 
