@@ -4,7 +4,7 @@ export default {
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
     eyebrow: "FULL-STACK · IA AGENTIQUE",
     headline: "Je construis des systèmes, pas des projets isolés.",
-    sub: "17 ans, je code depuis la classe 8, avec environ six onglets ouverts dans ma tête en permanence, aucun jamais fermé. Et pourtant je livre des choses réelles : applications de production et agents IA pour une startup, des clients freelance, et plus de 3 700 personnes qui ont installé quelque chose que j'ai construit. Une chose que j'aime vraiment chez moi : une fois que je décide de faire quelque chose, je le termine, peu importe ce qui se met en travers. Une chose que je n'aime pas : je suis très doué pour démarrer de nouveaux projets par pure curiosité, mais cette curiosité s'éteint vite dès que mon cerveau s'ennuie.",
+    sub: "17 ans, je code depuis la classe 8, avec environ six onglets ouverts dans ma tête en permanence, et je livre quand même des choses réelles : applications de production et agents IA pour une startup, des clients freelance, et plus de 3 700 personnes qui ont installé quelque chose que j'ai construit. Une fois que je commence, je termine. Quoi qu'il arrive.",
     cta: {
       primary: "Voir les réalisations",
       copied: "Copié",

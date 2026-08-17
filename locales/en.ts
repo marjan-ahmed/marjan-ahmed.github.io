@@ -4,7 +4,7 @@ export default {
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
     eyebrow: "FULL-STACK · AGENTIC AI",
     headline: "I build systems, not one-off builds.",
-    sub: "17, coding since Class 8, currently running about six tabs in my head at once and closing none of them. Somehow still ship real things: production apps and AI agents for a startup, freelance clients, and 3,700+ people who installed something I built. One thing I genuinely love about myself: once I decide to do something, I finish it, no matter what gets in the way. One thing I don't: I'm great at starting new projects out of pure curiosity, and that curiosity dies fast the second my brain gets bored.",
+    sub: "17, coding since Class 8, running about six tabs in my head at once, and still shipping real things: production apps and AI agents for a startup, freelance clients, and 3,700+ people who installed something I built. Once I start, I finish. No matter what.",
     cta: {
       primary: "See the deployments",
       copied: "Copied",

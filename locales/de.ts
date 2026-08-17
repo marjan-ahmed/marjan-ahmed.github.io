@@ -4,7 +4,7 @@ export default {
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
     eyebrow: "FULL-STACK · AGENTIC AI",
     headline: "Ich baue Systeme, keine Einzelprojekte.",
-    sub: "17, programmiere seit Klasse 8, mit ungefähr sechs offenen Tabs im Kopf gleichzeitig, keiner davon je geschlossen. Trotzdem liefere ich echte Dinge: Produktions-Apps und KI-Agenten für ein Startup, Freelance-Kunden und über 3.700 Menschen, die etwas installiert haben, das ich gebaut habe. Eine Sache, die ich wirklich an mir mag: Wenn ich mich entscheide, etwas zu tun, ziehe ich es durch, egal was dazwischenkommt. Eine Sache, die ich nicht mag: Ich bin sehr gut darin, neue Projekte aus reiner Neugier zu starten, aber diese Neugier stirbt schnell, sobald sich mein Gehirn langweilt.",
+    sub: "17, programmiere seit Klasse 8, mit ungefähr sechs offenen Tabs im Kopf gleichzeitig, und liefere trotzdem echte Dinge: Produktions-Apps und KI-Agenten für ein Startup, Freelance-Kunden und über 3.700 Menschen, die etwas installiert haben, das ich gebaut habe. Wenn ich anfange, ziehe ich es durch. Egal was kommt.",
     cta: {
       primary: "Projekte ansehen",
       copied: "Kopiert",
