@@ -86,12 +86,12 @@ export function ShipLog() {
                   </div>
 
                   <p className="mt-2 text-pretty text-sm font-medium leading-snug sm:text-base">
-                    {entry.title}
+                    {t(`entries.${entry.id}.title`)}
                   </p>
 
                   {entry.detail ? (
                     <p className="mt-1 text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm">
-                      {entry.detail}
+                      {t(`entries.${entry.id}.detail`)}
                     </p>
                   ) : null}
 
@@ -102,7 +102,7 @@ export function ShipLog() {
                       alt={entry.images[0].alt}
                       meta={entry.noteMeta ?? entry.date}
                       captionLabel={t("fieldNoteLabel")}
-                      caption={entry.note}
+                      caption={t(`entries.${entry.id}.note`)}
                       aspectClassName="aspect-[4/3]"
                     />
                   ) : entry.images?.length ? (

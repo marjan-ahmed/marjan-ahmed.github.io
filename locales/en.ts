@@ -142,6 +142,64 @@ export default {
       attended: "Attended",
     },
     fieldNoteLabel: "Field note",
+    entries: {
+      khinext: {
+        title: "KhiNext Tech Summit, Karachi",
+        detail: "\"AI, Commerce & The Future Consumer\" panel.",
+      },
+      mlsa: {
+        title: "Microsoft Student Ambassadors, Karachi",
+        detail: "Event management team.",
+      },
+      naxasware: {
+        title: "Naxasware, Full Stack Developer",
+        detail: "Shipping production features with the founding team.",
+      },
+      landingai: {
+        title: "AI Financial Hackathon, Submitted",
+        detail: "LandingAI, DocSamajh AI.",
+      },
+      devfest: {
+        title: "DevFest Karachi, GDG Kolachi's 10th anniversary",
+        detail: "Community event at NASTP.",
+      },
+      ibm: {
+        title: "Agentic AI Hackathon, Finalist",
+        detail: "IBM watsonx, lablab.ai.",
+      },
+      hacktoberfest: {
+        title: "Cloudways x DigitalOcean Hacktoberfest, 2nd Place",
+        detail: "Three-hour build. Contributed a feature to OpenAI Agents SDK.",
+        note: "Led the team. Two hours in, we had nothing working. The SDK didn't have what the brief needed. We found the gap, built around it, and didn't have a working demo until the last hour. 2nd place, standing next to Aaqib Sayed, the judge who called it.",
+      },
+      nasa: {
+        title: "NASA Space Apps, Kalkia",
+        detail: "Weather probability over 44 years of NASA data.",
+        note: "First time being an ambassador for anything. I made a Google form, posted it around school, got 16 responses. Then built Kalkia for the challenge myself: weather probability from 44 years of NASA data.",
+      },
+      pypi: {
+        title: "Gemini Starter Agent, PyPI",
+        detail: "3,723+ downloads.",
+      },
+      reintechs: {
+        title: "Reintechs, Web Developer (Freelance)",
+        detail: "5 to 7 production client sites over five months.",
+      },
+      gdg: {
+        title: "Google Build with AI, Top 10",
+        detail: "GDG Kolachi, Hunar Bazaar.",
+        note: "Top 10 out of the field, GDG Kolachi. We built Hunar Bazaar, a freelancing platform for rural Pakistani women, with AI-generated gig descriptions.",
+      },
+      innovista: {
+        title: "National Agentic AI Hackathon, Innovista Indus",
+        detail: "First hackathon. EdTech in Urdu, Sindhi, Punjabi, Pashto.",
+        note: "My first hackathon. The idea was right, AI responses in Urdu, Sindhi, Punjabi, and Pashto, but I was nowhere near as fast or as organised as I am now. Everything since has been catching up to that idea.",
+      },
+      giaic: {
+        title: "GIAIC, Agentic AI & Cloud Engineering",
+        detail: "Alongside matriculation.",
+      },
+    },
   },
   palette: {
     label: "Command palette",

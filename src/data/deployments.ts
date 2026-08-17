@@ -363,12 +363,12 @@ export const SHIP_LOG: LogEntry[] = [
     title: "Cloudways × DigitalOcean Hacktoberfest — 2nd Place",
     detail: "Three-hour build. Contributed a feature to OpenAI Agents SDK.",
     images: [
-      { src: getAssetPath("hacktoberfest-2nd-place.webp"), alt: "Team announced 2nd place at Hacktoberfest, with judge Aqib Sayed" },
+      { src: getAssetPath("hacktoberfest-2nd-place.webp"), alt: "Team announced 2nd place at Hacktoberfest, with judge Aaqib Sayed" },
       { src: getAssetPath("hacktoberfest-working.jpg"), alt: "Team working together mid-hackathon" },
       { src: getAssetPath("hacktoberfest-sdk-contribution.webp"), alt: "GitHub thread on the OpenAI Agents SDK contribution" },
     ],
     noteMeta: "Won · Oct 2025 · Karachi",
-    note: "Led the team. Two hours in, we had nothing working — the SDK didn't have what the brief needed. We found the gap, built around it, and didn't have a working demo until the last hour. 2nd place, standing next to Aqib Sayed, the judge who called it.",
+    note: "Led the team. Two hours in, we had nothing working — the SDK didn't have what the brief needed. We found the gap, built around it, and didn't have a working demo until the last hour. 2nd place, standing next to Aaqib Sayed, the judge who called it.",
   },
   {
     id: "nasa",

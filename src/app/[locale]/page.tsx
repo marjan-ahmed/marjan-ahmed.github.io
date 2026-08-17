@@ -9,7 +9,7 @@ import { ShipLog } from '@/components/site/ship-log';
 import ContactSection from '@/components/section/contact-section';
 
 export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'de' }, { locale: 'ja' }, { locale: 'ar' }, { locale: 'ur' }];
+  return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'de' }, { locale: 'ja' }, { locale: 'zh' }, { locale: 'ar' }, { locale: 'ur' }];
 }
 
 export default async function Page({params}: {params: Promise<{locale: string}>}) {

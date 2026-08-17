@@ -142,6 +142,64 @@ export default {
       attended: "Participé",
     },
     fieldNoteLabel: "Note de terrain",
+    entries: {
+      khinext: {
+        title: "Sommet Tech KhiNext, Karachi",
+        detail: "Panel « IA, Commerce et Futur Consommateur ».",
+      },
+      mlsa: {
+        title: "Ambassadeurs Étudiants Microsoft, Karachi",
+        detail: "Équipe de gestion d'événements.",
+      },
+      naxasware: {
+        title: "Naxasware, Développeur Full Stack",
+        detail: "Livrer des fonctionnalités de production avec l'équipe fondatrice.",
+      },
+      landingai: {
+        title: "Hackathon AI Financial, Soumis",
+        detail: "LandingAI, DocSamajh AI.",
+      },
+      devfest: {
+        title: "DevFest Karachi, 10e anniversaire de GDG Kolachi",
+        detail: "Événement communautaire à NASTP.",
+      },
+      ibm: {
+        title: "Hackathon Agentic AI, Finaliste",
+        detail: "IBM watsonx, lablab.ai.",
+      },
+      hacktoberfest: {
+        title: "Cloudways x DigitalOcean Hacktoberfest, 2e place",
+        detail: "Build de trois heures. Contribution d'une fonctionnalité à l'OpenAI Agents SDK.",
+        note: "Chef d'équipe. Deux heures après, rien ne fonctionnait. Le SDK n'avait pas ce que le brief nécessitait. Nous avons trouvé la faille, contourné le problème, et n'avons pas de démo fonctionnelle avant la dernière heure. 2e place, à côté d'Aaqib Sayed, le juge qui l'a dit.",
+      },
+      nasa: {
+        title: "NASA Space Apps, Kalkia",
+        detail: "Probabilité météo sur 44 ans de données NASA.",
+        note: "Première fois ambassadeur pour quoi que ce soit. J'ai fait un formulaire Google, l'ai partagé dans l'école, obtenu 16 réponses. Puis j'ai construit Kalkia pour le défi moi-même : probabilité météo sur 44 ans de données NASA.",
+      },
+      pypi: {
+        title: "Gemini Starter Agent, PyPI",
+        detail: "Plus de 3 723 téléchargements.",
+      },
+      reintechs: {
+        title: "Reintechs, Développeur Web (Freelance)",
+        detail: "5 à 7 sites clients en production sur cinq mois.",
+      },
+      gdg: {
+        title: "Google Build with AI, Top 10",
+        detail: "GDG Kolachi, Hunar Bazaar.",
+        note: "Top 10 sur le terrain, GDG Kolachi. Nous avons construit Hunar Bazaar, une plateforme de freelancing pour les femmes rurales pakistanaises, avec des descriptions de gigs générées par IA.",
+      },
+      innovista: {
+        title: "Hackathon National Agentic AI, Innovista Indus",
+        detail: "Premier hackathon. EdTech en ourdou, sindhi, pendjabi, pachto.",
+        note: "Mon premier hackathon. L'idée était bonne, des réponses IA en ourdou, sindhi, pendjabi et pachto, mais je n'étais pas aussi rapide ou organisé que maintenant. Tout depuis a été pour rattraper cette idée.",
+      },
+      giaic: {
+        title: "GIAIC, Agentic AI et Cloud Engineering",
+        detail: "En parallèle du lycée.",
+      },
+    },
   },
   palette: {
     label: "Palette de commandes",
