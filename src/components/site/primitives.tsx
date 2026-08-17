@@ -128,6 +128,19 @@ export function StatusDot({
   );
 }
 
+/** Corner reticles — turns a photo or avatar frame into a technical drawing. */
+export function Reticle({ className }: { className: string }) {
+  return (
+    <span
+      aria-hidden
+      className={cn(
+        "pointer-events-none absolute size-3 border-signal/70",
+        className
+      )}
+    />
+  );
+}
+
 /** Small mono chip used for stack items and tags. */
 export function Chip({
   children,

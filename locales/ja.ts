@@ -4,7 +4,7 @@ export default {
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
     eyebrow: "フルスタック・エージェンティックAI",
     headline: "単発ではなく、システムを作る。",
-    sub: "17歳、中学2年生からコーディング。スタートアップ、フリーランスのクライアント、そして自分がリリースしたものをインストールした3,700人以上のために、本番アプリとAIエージェントを作っている。",
+    sub: "17歳、中学2年生からコーディング。頭の中では常にタブが6つくらい開きっぱなしで、一つも閉じたことがない。それでもちゃんと形にする。スタートアップ、フリーランスのクライアント、そして自分がリリースしたものをインストールした3,700人以上のために、本番アプリとAIエージェントを作っている。自分について本当に気に入っているところが一つある。何かをやると決めたら、何があっても最後までやり遂げる。逆に好きじゃないところも一つある。純粋な好奇心で新しいプロジェクトを始めるのはすごく得意だけど、脳が飽きた瞬間にその好奇心はあっという間に消えてしまう。",
     cta: {
       primary: "実績を見る",
       copied: "コピーしました",
@@ -105,7 +105,7 @@ export default {
     title: "問題を任されたときの働き方",
     lede: "5つの習慣、それぞれに裏付けがある — 証拠のない原則はただのスローガン。",
     receipt: "裏付け：",
-    closer: "上記はすべて検証可能。それが狙い。",
+    closer: "上記はすべて検証可能。それが狙い——鵜呑みにするより、抜けている部分を自分の目で確かめてほしい。",
     items: {
       friction: {
         title: "摩擦から始める",
@@ -139,7 +139,9 @@ export default {
       published: "公開",
       joined: "参加",
       started: "開始",
+      attended: "出席",
     },
+    fieldNoteLabel: "現場メモ",
   },
   palette: {
     label: "コマンドパレット",
@@ -172,102 +174,12 @@ export default {
     log: "LOG",
     contact: "連絡先",
   },
-  about: {
-    title: "自己紹介",
-    summary: "17歳、中学2年生からコーディング。本番環境のWebアプリとAIエージェントを開発し、実際の問題を解決している。NaxaswareではMERNスタック全体で本番機能をリリース。Reintechsでは5〜7件のクライアントサイトを構築し、Next.js + ヘッドレスWooCommerceストアフロントを実現。CLIオープンソースツール（Gemini Starter Agent）でPyPIダウンロード3,723超。LandingAI Financial Hackathon向けにDocSamajh AIを開発、手動作業を70%削減。現在、RAGチャットボットとマルチエージェントシステムを備えたAIネイティブ学習プラットフォームを構築中。システム思考で一発のビルドではなく、持続可能な仕組みを考える。",
-  },
-  work: {
-    title: "職歴",
-    present: "現在",
-    items: {
-      naxasware: {
-        title: "フルスタック開発者（インターン）",
-        description: "MERNスタック全体で本番機能をリリース。エンドツーエンドのデバッグ、リモートチームで期日通りに納品。",
-      },
-      reintechs: {
-        title: "Web開発者（フリーランス）",
-        description: "5〜7件のクライアントサイトを構築・デプロイ。Next.js + ヘッドレスWooCommerce。経営陣から感謝状を授与。",
-      },
-    },
-  },
-  education: {
-    title: "学歴",
-    items: {
-      giaic: {
-        degree: "エージェンティックAI＆クラウドエンジニアリング - エージェンシーの技術基盤を構築中",
-      },
-      nasra: {
-        degree: "マトリキュレーション（AKU-EB Board）- 本番システム構築とハッカソン優勝しながら学校を卒業",
-      },
-    },
-  },
-  skills: {
-    title: "技術スキル",
-  },
-  favouriteTools: {
-    title: "お気に入りツール",
-  },
-  certifications: {
-    title: "資格・受賞歴",
-  },
-  volunteering: {
-    title: "ボランティア",
-  },
   contact: {
     title: "お問い合わせ",
     letsConnect: "つながりましょう",
     description: "プロジェクトのアイデアがある方、一緒に働きたい方は{email}または{linkedin}でご連絡ください。現在、契約制の仕事に応募可能です。",
     emailLink: "メール",
     linkedinLink: "LinkedIn",
-  },
-  hackathons: {
-    title: "ハッカソン＆受賞歴",
-    tagline: "問題が先、コードは後",
-    description: "2024年から6回のハッカソン参加 — Google Build with AIでトップ10、Hacktoberfestで2位、IBM watsonxでファイナリスト。本質的な摩擦がある問題を選んで、解決策をbuildする。",
-    items: {
-      landingai: {
-        description: "DocSamajh AI：マルチエージェントによる請求書-Pオーマッチング、精度85-90%。応募のみ、入賞なし。",
-      },
-      hacktoberfest: {
-        description: "2位。3時間のハッカソン、最後の1時間で全てを構築。",
-      },
-      gdg: {
-        description: "トップ10ファイナリストチーム。Hunar Bazaar：パキスタン農村女性向けフリーランスプラットフォーム。",
-      },
-      ibm: {
-        description: "ファイナリスト。マルチエージェントオーケストレーションシステム。",
-      },
-      nasa: {
-        description: "Kalkia：44年分のNASAデータを使用した気象確率チェッカー。",
-      },
-      innovista: {
-        description: "ウルドゥー語、シンド語、パンジャブ語、パシュトー語でAI応答するEdTechアプリ。初ハッカソン。",
-      },
-    },
-  },
-  projects: {
-    title: "プロジェクト",
-    tagline: "注目の作品",
-    description: "本番アプリ、オープンソースツール、AIシステム - 実際にリリースしたもの。",
-    imageAlt: "{title} 画像",
-    openLink: "{title} を開く",
-    items: {
-      textbook: {
-        description: "RAGチャットボットを組み込んだAIネイティブ学習プラットフォーム。3サービス：Docusaurus、FastAPI RAG、Express認証。",
-      },
-      aiVault: {
-        description: "ヒューマンインザループ自動化。Obsidianボールト + Claude Code + MCP。承認制アクション。",
-      },
-      geminiAgent: {
-        description: "AIエージェントプロジェクト用オープンソースCLI。OpenAI Agents SDK + マルチプロバイダー。PyPI 3,723+ダウンロード。",
-      },
-      docSamajh: {
-        description: "LandingAI Financial Hackathon向けに開発。LandingAI ADE、Gemini、OpenAI Agents SDKによる請求書-P調和。",
-      },
-      shooter: {
-        description: "ブラウザベースシューティングゲーム。Canvasレンダリング、衝突検出、リアルタイム物理学。",
-      },
-    },
   },
   common: {
     notAvailable: "N/A",

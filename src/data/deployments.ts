@@ -91,7 +91,7 @@ export const DEPLOYMENTS: Deployment[] = [
       { value: "~70%", label: "manual effort removed" },
     ],
     links: [
-      { label: "Source", href: "https://github.com/marjan-ahmed", kind: "source" },
+      { label: "Source", href: "https://github.com/marjan-ahmed/docsamajh-ai", kind: "source" },
     ],
   },
   {
@@ -126,7 +126,7 @@ export const DEPLOYMENTS: Deployment[] = [
       { value: "5", label: "curriculum domains" },
     ],
     links: [
-      { label: "Source", href: "https://github.com/marjan-ahmed", kind: "source" },
+      { label: "Source", href: "https://github.com/marjan-ahmed/humanoid-textbook", kind: "source" },
     ],
   },
   {
@@ -151,7 +151,9 @@ export const DEPLOYMENTS: Deployment[] = [
       { value: "3", label: "channels watched" },
       { value: "1", label: "readable audit trail" },
     ],
-    links: [],
+    links: [
+      { label: "Source", href: "https://github.com/marjan-ahmed/ai_employee_vault", kind: "source" },
+    ],
   },
   {
     id: "gemini-starter",
@@ -180,7 +182,7 @@ export const DEPLOYMENTS: Deployment[] = [
         href: "https://pypi.org/project/gemini-starter-agent/",
         kind: "package",
       },
-      { label: "Source", href: "https://github.com/marjan-ahmed", kind: "source" },
+      { label: "Source", href: "https://github.com/marjan-ahmed/gemini-starter-agent", kind: "source" },
     ],
   },
   {
@@ -277,7 +279,7 @@ export const CAPABILITIES: Capability[] = [
    Ship log — everything that left my machine, in order.
    ------------------------------------------------------------------ */
 
-export type LogKind = "won" | "shipped" | "published" | "joined" | "started";
+export type LogKind = "won" | "shipped" | "published" | "joined" | "started" | "attended";
 
 export interface LogEntry {
   id: string;
@@ -287,9 +289,29 @@ export interface LogEntry {
   kind: LogKind;
   title: string;
   detail?: string;
+  /** Real photos, shown as small receipts — evidence, not decoration. */
+  images?: { src: string; alt: string }[];
+  /**
+   * A handful of entries get the full reticle-framed treatment instead of
+   * small thumbnails — `images[0]` is used as the photo. Meant for two or
+   * three a year, not every entry; the rest stay compact.
+   */
+  note?: string;
+  noteMeta?: string;
 }
 
 export const SHIP_LOG: LogEntry[] = [
+  {
+    id: "khinext",
+    date: "Jun 2026",
+    sort: 202606,
+    kind: "attended",
+    title: "KhiNext Tech Summit — Karachi",
+    detail: "\"AI, Commerce & The Future Consumer\" panel.",
+    images: [
+      { src: getAssetPath("khinext_event.jpg"), alt: "At the KhiNext tech summit in Karachi" },
+    ],
+  },
   {
     id: "mlsa",
     date: "Apr 2026",
@@ -315,6 +337,17 @@ export const SHIP_LOG: LogEntry[] = [
     detail: "LandingAI · DocSamajh AI",
   },
   {
+    id: "devfest",
+    date: "Dec 2025",
+    sort: 202512.5,
+    kind: "attended",
+    title: "DevFest Karachi — GDG Kolachi's 10th anniversary",
+    detail: "Community event at NASTP.",
+    images: [
+      { src: getAssetPath("devfest-event.jpg"), alt: "At DevFest Karachi, GDG Kolachi's 10th anniversary event" },
+    ],
+  },
+  {
     id: "ibm",
     date: "Nov 2025",
     sort: 202511,
@@ -329,6 +362,13 @@ export const SHIP_LOG: LogEntry[] = [
     kind: "won",
     title: "Cloudways × DigitalOcean Hacktoberfest — 2nd Place",
     detail: "Three-hour build. Contributed a feature to OpenAI Agents SDK.",
+    images: [
+      { src: getAssetPath("hacktoberfest-2nd-place.webp"), alt: "Team announced 2nd place at Hacktoberfest, with judge Aqib Sayed" },
+      { src: getAssetPath("hacktoberfest-working.jpg"), alt: "Team working together mid-hackathon" },
+      { src: getAssetPath("hacktoberfest-sdk-contribution.webp"), alt: "GitHub thread on the OpenAI Agents SDK contribution" },
+    ],
+    noteMeta: "Won · Oct 2025 · Karachi",
+    note: "Led the team. Two hours in, we had nothing working — the SDK didn't have what the brief needed. We found the gap, built around it, and didn't have a working demo until the last hour. 2nd place, standing next to Aqib Sayed, the judge who called it.",
   },
   {
     id: "nasa",
@@ -337,6 +377,11 @@ export const SHIP_LOG: LogEntry[] = [
     kind: "shipped",
     title: "NASA Space Apps — Kalkia",
     detail: "Weather probability over 44 years of NASA data",
+    images: [
+      { src: getAssetPath("nasa-spaceapps-presentation.jpg"), alt: "Presenting Kalkia in the NASA Space Apps Karachi Discord" },
+    ],
+    noteMeta: "Shipped · Oct 2025 · Karachi",
+    note: "First time being an ambassador for anything — I made a Google form, posted it around school, got 16 responses. Then built Kalkia for the challenge myself: weather probability from 44 years of NASA data.",
   },
   {
     id: "pypi",
@@ -361,6 +406,12 @@ export const SHIP_LOG: LogEntry[] = [
     kind: "won",
     title: "Google Build with AI — Top 10",
     detail: "GDG Kolachi · Hunar Bazaar",
+    images: [
+      { src: getAssetPath("gdg-buildwithai-presenting.jpg"), alt: "Team presenting Hunar Bazaar at Build with AI" },
+      { src: getAssetPath("gdg-buildwithai-team.jpg"), alt: "Team behind Hunar Bazaar at Build with AI" },
+    ],
+    noteMeta: "Won · Jun 2024 · Karachi",
+    note: "Top 10 out of the field, GDG Kolachi. We built Hunar Bazaar — a freelancing platform for rural Pakistani women, with AI-generated gig descriptions.",
   },
   {
     id: "innovista",
@@ -369,6 +420,12 @@ export const SHIP_LOG: LogEntry[] = [
     kind: "shipped",
     title: "National Agentic AI Hackathon — Innovista Indus",
     detail: "First hackathon. EdTech in Urdu, Sindhi, Punjabi, Pashto.",
+    images: [
+      { src: getAssetPath("innovista-event.jpg"), alt: "At Innovista Indus for the National Agentic AI Hackathon" },
+      { src: getAssetPath("innovista-team.jpg"), alt: "With teammates at Innovista, first hackathon" },
+    ],
+    noteMeta: "Shipped · 2024 · Karachi",
+    note: "My first hackathon. The idea was right — AI responses in Urdu, Sindhi, Punjabi, and Pashto — but I was nowhere near as fast or as organised as I am now. Everything since has been catching up to that idea.",
   },
   {
     id: "giaic",

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 
 import { SHIP_LOG, type LogKind } from "@/data/deployments";
 import { cn } from "@/lib/utils";
+import { FieldFrame } from "./field-frame";
 import { Container, Reveal, SectionHeader } from "./primitives";
 
 const KIND_STYLE: Record<LogKind, string> = {
@@ -12,6 +13,7 @@ const KIND_STYLE: Record<LogKind, string> = {
   shipped: "border-foreground/20 bg-card text-foreground/80",
   joined: "border-rule bg-surface text-muted-foreground",
   started: "border-rule bg-surface text-muted-foreground",
+  attended: "border-rule bg-surface text-muted-foreground",
 };
 
 /**
@@ -91,6 +93,35 @@ export function ShipLog() {
                     <p className="mt-1 text-pretty text-xs leading-relaxed text-muted-foreground sm:text-sm">
                       {entry.detail}
                     </p>
+                  ) : null}
+
+                  {entry.note && entry.images?.length ? (
+                    <FieldFrame
+                      className="mt-4 max-w-md"
+                      src={entry.images[0].src}
+                      alt={entry.images[0].alt}
+                      meta={entry.noteMeta ?? entry.date}
+                      captionLabel={t("fieldNoteLabel")}
+                      caption={entry.note}
+                      aspectClassName="aspect-[4/3]"
+                    />
+                  ) : entry.images?.length ? (
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      {entry.images.map((img) => (
+                        <div
+                          key={img.src}
+                          className="size-24 shrink-0 overflow-hidden rounded-xl border border-rule bg-surface shadow-sm transition-transform duration-200 hover:scale-105 sm:size-32"
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={img.src}
+                            alt={img.alt}
+                            loading="lazy"
+                            className="size-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </div>
                   ) : null}
                 </div>
               </div>

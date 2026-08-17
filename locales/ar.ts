@@ -4,7 +4,7 @@ export default {
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
     eyebrow: "فُل ستاك · ذكاء اصطناعي تفاعلي",
     headline: "أبني أنظمة، لا مشاريع منفصلة.",
-    sub: "17 سنة، أكتب الكود منذ الصف الثامن. تطبيقات إنتاجية وعملاء ذكاء اصطناعي لشركة ناشئة، وعملاء مستقلين، وأكثر من 3,700 شخص ثبّتوا شيئاً بنيته.",
+    sub: "17 سنة، أكتب الكود منذ الصف الثامن، وفي رأسي دائماً حوالي ست علامات تبويب مفتوحة، لا أُغلق أياً منها. ومع ذلك أنجز أشياء حقيقية: تطبيقات إنتاجية وعملاء ذكاء اصطناعي لشركة ناشئة، وعملاء مستقلين، وأكثر من 3,700 شخص ثبّتوا شيئاً بنيته. هناك شيء أحبه حقاً في نفسي: عندما أقرر فعل شيء ما، أُنجزه مهما اعترض طريقي. وهناك شيء لا أحبه: أنا بارع جداً في بدء مشاريع جديدة بدافع الفضول الخالص، لكن هذا الفضول يموت بسرعة بمجرد أن يشعر عقلي بالملل.",
     cta: {
       primary: "شاهد الإنجازات",
       copied: "تم النسخ",
@@ -105,7 +105,7 @@ export default {
     title: "كيف أعمل عندما أُلقى في مشكلة",
     lede: "خمس عادات، كل واحدة بدليل — المبدأ بلا دليل مجرد شعار.",
     receipt: "الدليل:",
-    closer: "كل ما سبق قابل للتحقق. وهذا مقصود.",
+    closer: "كل ما سبق قابل للتحقق. وهذا مقصود — أفضّل أن تكتشف الثغرات بنفسك بدلاً من أن تصدّق كلامي فقط.",
     items: {
       friction: {
         title: "البدء من الاحتكاك",
@@ -139,7 +139,9 @@ export default {
       published: "منشور",
       joined: "انضم",
       started: "بدأ",
+      attended: "حضر",
     },
+    fieldNoteLabel: "ملاحظة ميدانية",
   },
   palette: {
     label: "لوحة الأوامر",
@@ -172,102 +174,12 @@ export default {
     log: "السجل",
     contact: "التواصل",
   },
-  about: {
-    title: "نبذة عني",
-    summary: "17 سنة، أكتب الكود منذ الصف الثامن. أبني تطبيقات ويب إنتاجية وعملاء ذكاء اصطناعي يحلون مشاكل حقيقية. في Naxasware، قدّمت ميزات إنتاجية عبر(stack MERN. في Reintechs، بنيت 5-7 مواقع عملاء، بما في ذلك واجهة Next.js + WooCommerce. أنشأت أداة CLI مفتوحة المصدر (Gemini Starter Agent) بتنزيلات PyPI أكثر من 3,723. بنيت DocSamajh AI لمشاركة hackathon LandingAI المالي، نظام مطابقة الفواتير الذي قلل الجهد اليدوي بنسبة 70%. أبني حالياً منصات تعلم أصلية الذكاء الاصطناعي مع روبوتات المحادثة RAG و أنظمة الوكلاء المتعددين. أفكر في الأنظمة، لا في البناء المنفصل.",
-  },
-  work: {
-    title: "الخبرة العملية",
-    present: "الحالي",
-    items: {
-      naxasware: {
-        title: "مطور Full Stage (تدريب)",
-        description: "قدّمت ميزات إنتاجية عبر(stack MERN بالكامل. تنقيح شامل، تسليم في الوقت المحدد.",
-      },
-      reintechs: {
-        title: "مطور ويب (مستقل)",
-        description: "بني ونشرت 5-7 مواقع عملاء. واجهة Next.js + WooCommerce. رسالة تقدير من القيادة.",
-      },
-    },
-  },
-  education: {
-    title: "التعليم",
-    items: {
-      giaic: {
-        degree: "الذكاء الاصطناعي التفاعلي وهندسة السحابة - بناء الأساس التقني لوكالة",
-      },
-      nasra: {
-        degree: "الشهادة الثانوية (AKU-EB Board) - إنهاء المدرسة أثناء بناء أنظمة إنتاجية والفوز بـ hackathons",
-      },
-    },
-  },
-  skills: {
-    title: "المهارات التقنية",
-  },
-  favouriteTools: {
-    title: "الأدوات المفضلة",
-  },
-  certifications: {
-    title: "الشهادات والجوائز",
-  },
-  volunteering: {
-    title: "التطوع",
-  },
   contact: {
     title: "اتصل",
     letsConnect: "لنتصل",
     description: "لديك فكرة مشروع أو تريد العمل معاً؟ تواصل عبر {email} أو {linkedin}. أنا مفتوح للعمل بالعقد.",
     emailLink: "البريد الإلكتروني",
     linkedinLink: "LinkedIn",
-  },
-  hackathons: {
-    title: "Hackathons والجوائز",
-    tagline: "المشكلة أولاً، الكود لاحقاً",
-    description: "ستة hackathons منذ 2024 — أعلى 10 في Google Build with AI، الثاني في Hacktoberfest، متأهل للنهائي في IBM watsonx. أختار مشاكل بها احتكاك حقيقي - ثم أكتشف كيف أبني الحل.",
-    items: {
-      landingai: {
-        description: "DocSamajh AI: مطابقة فواتير متعددة الوكلاء بدقة 85-90%. تم التقديم، بدون ترتيب.",
-      },
-      hacktoberfest: {
-        description: "الثاني. hackathon ثلاث ساعات، كل شيء بنيت في آخر ساعة.",
-      },
-      gdg: {
-        description: "فريق متأهل ضمن أعلى 10. Hunar Bazaar: منصة العمل الحر للنساء الريفيات في باكستان.",
-      },
-      ibm: {
-        description: "المتأهل للنهائي. نظام تنسيق متعدد الوكلاء.",
-      },
-      nasa: {
-        description: "Kalkia: فاحص احتمالات الطقس باستخدام 44 سنة من بيانات NASA.",
-      },
-      innovista: {
-        description: "تطبيق EdTech مع ردود ذكاء اصطناعي بالأردية والسندية والبنجابية والباشتوية. أول hackathon.",
-      },
-    },
-  },
-  projects: {
-    title: "المشاريع",
-    tagline: "أعمال مميزة",
-    description: "تطبيقات إنتاجية، أدوات مفتوحة المصدر، وأنظمة ذكاء اصطناعي - ما بنيته فعلاً.",
-    imageAlt: "صورة {title}",
-    openLink: "فتح {title}",
-    items: {
-      textbook: {
-        description: "منصة تعلم أصلية الذكاء الاصطناعي مع روبوت محادثة RAG مدمج. نظام 3 خدمات: Docusaurus، FastAPI RAG، Express auth.",
-      },
-      aiVault: {
-        description: "أتمتة Human-in-the-loop. خزنة Obsidian + Claude Code + MCP. إجراءات معتمدة.",
-      },
-      geminiAgent: {
-        description: "CLI مفتوحة المصدر ل トラック مشاريع عملاء الذكاء الاصطناعي. OpenAI Agents SDK + multi-provider. أكثر من 3,723 تنزيل PyPI.",
-      },
-      docSamajh: {
-        description: "بني من أجل LandingAI Financial Hackathon. مطابقة فواتير مع LandingAI ADE و Gemini و OpenAI Agents SDK.",
-      },
-      shooter: {
-        description: "لعبة إطلاق نار في المتصفح. عرض Canvas، كشف التصادم، فيزياء في الوقت الفعلي.",
-      },
-    },
   },
   common: {
     notAvailable: "غير متاح",

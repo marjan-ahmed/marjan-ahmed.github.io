@@ -4,7 +4,7 @@ export default {
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
     eyebrow: "فل سٹیک · ایجنٹک AI",
     headline: "میں سسٹمز بناتا ہوں، الگ تھلگ پروجیکٹس نہیں۔",
-    sub: "17 سالہ، کلاس 8 سے کوڈنگ کر رہا ہوں۔ ایک اسٹارٹ اپ، فری لانس کلائنٹس، اور 3,700+ لوگوں کے لیے پروڈکشن ایپس اور AI ایجنٹس بناتا ہوں جنہوں نے میری بنائی ہوئی کوئی چیز انسٹال کی۔",
+    sub: "17 سالہ، کلاس 8 سے کوڈنگ کر رہا ہوں، ذہن میں ہر وقت تقریباً چھ ٹیبز کھلے رہتے ہیں، کوئی بند نہیں ہوتا۔ اس کے باوجود اصل چیزیں بنا کر دکھاتا ہوں: ایک اسٹارٹ اپ، فری لانس کلائنٹس، اور 3,700+ لوگوں کے لیے پروڈکشن ایپس اور AI ایجنٹس، جنہوں نے میری بنائی ہوئی کوئی چیز انسٹال کی۔ ایک چیز جو مجھے اپنے بارے میں واقعی پسند ہے: جب میں کسی کام کو کرنے کا فیصلہ کر لیتا ہوں تو اسے پورا کرتا ہوں، چاہے راستے میں کچھ بھی آئے۔ اور ایک چیز جو مجھے پسند نہیں: میں نئے پروجیکٹس محض تجسس کی بنا پر شروع کرنے میں بہت اچھا ہوں، لیکن یہ تجسس ذہن کے بور ہوتے ہی جلدی ختم ہو جاتا ہے۔",
     cta: {
       primary: "کام دیکھیں",
       copied: "کاپی ہو گیا",
@@ -105,7 +105,7 @@ export default {
     title: "جب مجھے کسی مسئلے میں ڈالا جاتا ہے تو میں کیسے کام کرتا ہوں",
     lede: "پانچ عادات، ہر ایک ثبوت کے ساتھ — بغیر ثبوت کے اصول محض ایک نعرہ ہے۔",
     receipt: "ثبوت:",
-    closer: "اوپر بتائی گئی ہر چیز قابل تصدیق ہے۔ یہ جان بوجھ کر ہے۔",
+    closer: "اوپر بتائی گئی ہر چیز قابل تصدیق ہے۔ یہ جان بوجھ کر ہے — میں چاہتا ہوں کہ آپ خود کمیاں تلاش کریں، صرف میری بات پر یقین نہ کریں۔",
     items: {
       friction: {
         title: "رکاوٹ سے شروعات",
@@ -139,7 +139,9 @@ export default {
       published: "شائع",
       joined: "شامل ہوا",
       started: "شروع کیا",
+      attended: "شرکت کی",
     },
+    fieldNoteLabel: "فیلڈ نوٹ",
   },
   palette: {
     label: "کمانڈ پیلیٹ",
@@ -172,102 +174,12 @@ export default {
     log: "لاگ",
     contact: "رابطہ",
   },
-  about: {
-    title: "مارے بارے میں",
-    summary: "17 سالہ، کلاس 8 سے کوڈنگ کر رہا ہوں۔ میں پروڈکشن ویب ایپس اور AI ایجنٹس بناتا ہوں جو حقیقی مسائل حل کرتے ہیں۔ Naxasware میں میں نے MERN stack میں پروڈکشن فیچرز دلیے۔ Reintechs میں میں نے 5-7 کلائنٹ سائٹیں بنائیں۔ میں نے Gemini Starter Agent CLI ٹول بنایا جس کے PyPI ڈاؤنلوڈز 3,723+ ہیں۔ LandingAI Financial Hackathon کے لیے DocSamajh AI بنایا، جس نے مینوئل effort 70% کم کی۔ میں فی الحال RAG چیٹ بوٹس اور ملٹی ایجنٹ سسٹمز کے ساتھ AI native learning platforms بنا رہا ہوں۔ میں systems کے بارے میں سوچتا ہوں، one-off builds نہیں۔",
-  },
-  work: {
-    title: "کام کا تجربہ",
-    present: "موجودہ",
-    items: {
-      naxasware: {
-        title: "فال سٹیک ڈویلپر (انٹرن)",
-        description: "MERN stack میں پروڈکشن فیچرز دلیے۔ اینڈ ٹو اینڈ ڈیبگنگ، ٹیم میں وقت پر ڈلیوری۔",
-      },
-      reintechs: {
-        title: "ویب ڈویلپر (فری لانس)",
-        description: "5-7 کلائنٹ سائٹیں بنائیں اور ڈیپلوی کیں۔ Next.js + WooCommerce۔ قیادت سے تعریفی خط ملا۔",
-      },
-    },
-  },
-  education: {
-    title: "تعلیم",
-    items: {
-      giaic: {
-        degree: "ایجنٹک AI اور کلاؤڈ انجینئرنگ - ایجنسی کی ٹیکنیکل بنیاد بنا رہا ہوں",
-      },
-      nasra: {
-        degree: "میٹریکولیشن (AKU-EB Board) - پروڈکشن سسٹمز بناتے ہوئے اور hackathons جیتتے ہوئے اسکول مکمل کر رہا ہوں",
-      },
-    },
-  },
-  skills: {
-    title: "تکنیکل مہارتیں",
-  },
-  favouriteTools: {
-    title: "پسندیدہ ٹولز",
-  },
-  certifications: {
-    title: "سپٹیفیکیشنز اور انعامات",
-  },
-  volunteering: {
-    title: "volunteerism",
-  },
   contact: {
     title: "رابطہ",
     letsConnect: "جڑیں",
     description: "کوئی پروجیکٹ کا خیال ہے یا ساتھ کام کرنا چاہتے ہیں؟ {email} یا {linkedin} پر رابطہ کریں۔ میں کنٹریکٹ ورک کے لیے کھلا ہوں۔",
     emailLink: "ای میل",
     linkedinLink: "LinkedIn",
-  },
-  hackathons: {
-    title: "Hackathons اور انعامات",
-    tagline: "مسئلہ پہلے، کود بعد میں",
-    description: "2024 سے چھ hackathons۔ Google Build with AI میں ٹاپ 10، Hacktoberfest میں دوسرا، IBM watsonx میں فائنلسٹ۔ میں ان مسائل کا انتخاب کرتا ہوں جن میں حقیقی رکاوٹ ہو - پھر میں حل بنانا سیکھتا ہوں۔",
-    items: {
-      landingai: {
-        description: "DocSamajh AI: 85-90% درستگی کے ساتھ ملٹی ایجنٹ انوائس-ٹو-PO میچنگ۔ جمع کرایا، کوئی پوزیشن نہیں ملی۔",
-      },
-      hacktoberfest: {
-        description: "دوسرا۔ تین گھنٹے کا hackathon، آخری گھنٹے میں سب کچھ بنایا۔",
-      },
-      gdg: {
-        description: "ٹاپ 10 فائنلسٹ ٹیم۔ Hunar Bazaar: پاکستان کی دیہی خواتین کے لیے فری لانسنگ پلیٹ فارم۔",
-      },
-      ibm: {
-        description: "فائنلسٹ۔ ملٹی ایجنٹ آرکسٹریشن سسٹم۔",
-      },
-      nasa: {
-        description: "Kalkia: 44 سال کے NASA ڈیٹا سے موسم کے امکانات کی جانچ۔",
-      },
-      innovista: {
-        description: "اردو، سندھی، پنجابی، پشتو میں AI جوابات والا EdTech ایپ۔ پہلا hackathon۔",
-      },
-    },
-  },
-  projects: {
-    title: "پروجیکٹس",
-    tagline: "منتخب کام",
-    description: "پروڈکشن ایپس، اوپن سورس ٹولز، اور AI systems - جو میں نے واقعی بنایا۔",
-    imageAlt: "{title} تصویر",
-    openLink: "{title} کھولیں",
-    items: {
-      textbook: {
-        description: "AI native learning platform جس میں RAG چیٹ بوٹ یکجھ ہے۔ 3 سروس: Docusaurus، FastAPI RAG، Express auth۔",
-      },
-      aiVault: {
-        description: "Human-in-the-loop خودکاری۔ Obsidian vault + Claude Code + MCP server۔ منظوری سے چلنے والے ایکشن۔",
-      },
-      geminiAgent: {
-        description: "AI agent پروجیکٹس کے لیے اوپن سورس CLI۔ OpenAI Agents SDK + ملٹی پرووائیڈر۔ 3,723+ PyPI ڈاؤنلوڈز۔",
-      },
-      docSamajh: {
-        description: "LandingAI Financial Hackathon کے لیے بنایا۔ LandingAI ADE، Gemini، اور OpenAI Agents SDK کے ساتھ انوائس-ٹو-PO ہم آہنگی۔",
-      },
-      shooter: {
-        description: "براؤزر بیسڈ شوٹر گیم۔ Canvas رنڈرنگ، کولاژن ڈیٹیکشن، ریئل ٹائم فزکس۔",
-      },
-    },
   },
   common: {
     notAvailable: "دستیاب نہیں",

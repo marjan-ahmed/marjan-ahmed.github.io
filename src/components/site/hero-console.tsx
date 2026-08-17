@@ -6,20 +6,7 @@ import { ArrowDown, Check, Copy } from "lucide-react";
 import { DATA } from "@/data/resume";
 import { useCopy, useZonedClock } from "@/lib/hooks";
 import { cn } from "@/lib/utils";
-import { Container, StatusDot } from "./primitives";
-
-/** Corner reticles — turns the avatar frame into a technical drawing. */
-function Reticle({ className }: { className: string }) {
-  return (
-    <span
-      aria-hidden
-      className={cn(
-        "pointer-events-none absolute size-3 border-signal/70",
-        className
-      )}
-    />
-  );
-}
+import { Container, Reticle, StatusDot } from "./primitives";
 
 function MetaRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
