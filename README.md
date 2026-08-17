@@ -19,7 +19,7 @@ Turbopack), TypeScript, and Tailwind CSS v4.
 
 ## Features
 
-- **Fully internationalized** — English, French, German, Japanese, Arabic, and Urdu via
+- **Fully internationalized** — English, French, German, Japanese, Chinese, Arabic, and Urdu via
   [`next-intl`](https://next-intl.dev/), with automatic RTL layout for ar/ur, and a first-visit
   browser-language auto-detect that only ever runs once per visitor
 - **Deployment case studies** — each shipped project told as Friction → Constraint → System → Impact,
