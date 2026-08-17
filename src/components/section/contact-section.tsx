@@ -16,7 +16,7 @@ export default function ContactSection() {
     <section id="contact" className="py-20 sm:py-28">
       <Container className="flex flex-col gap-10">
         <SectionHeader
-          index="005"
+          index="006"
           eyebrow={t("nav.contact")}
           title={t("contact.letsConnect")}
           lede={t("contact.description", {

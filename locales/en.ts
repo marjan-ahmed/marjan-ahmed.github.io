@@ -2,8 +2,8 @@ export default {
   hero: {
     hi: "I am {name}",
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
-    eyebrow: "FULL-STACK · AGENTIC AI",
-    headline: "I build systems, not one-off builds.",
+    eyebrow: "BUILDER · AGENTIC AI",
+    headline: "Give me the problem. I ship the system.",
     sub: "17, coding since Class 8, running about six tabs in my head at once, and still shipping real things: production apps and AI agents for a startup, freelance clients, and 3,700+ people who installed something I built. Once I start, I finish. No matter what.",
     cta: {
       primary: "See the deployments",
@@ -11,13 +11,13 @@ export default {
       copyEmail: "Copy email",
     },
     card: {
-      role: "Full-Stack Developer & Agentic AI Engineer",
+      role: "Builder — Agentic AI Systems",
       base: "Base",
       local: "Local time",
       focus: "Focus",
       focusValue: "Agentic AI systems",
       status: "Status",
-      statusValue: "Open to work",
+      statusValue: "Open to co-build",
     },
   },
   proof: {
@@ -34,6 +34,10 @@ export default {
     eyebrow: "DEPLOYMENTS",
     title: "What actually shipped",
     lede: "Five systems, end to end. The friction that started them, the constraint I designed around, and what moved because of it.",
+    origin: {
+      self: "Self-initiated",
+      hackathon: "Hackathon build",
+    },
     beats: {
       friction: "Friction",
       constraint: "Constraint",
@@ -79,7 +83,7 @@ export default {
   },
   capabilities: {
     eyebrow: "CAPABILITIES",
-    title: "How I'm useful",
+    title: "How I operate",
     lede: "Grouped by the problem each one solves, not by language, so it reads the way the work actually happens.",
     items: {
       ship: {
@@ -201,6 +205,11 @@ export default {
       },
     },
   },
+  roadmap: {
+    eyebrow: "ROADMAP",
+    body: "First on my roadmap: an AI-native company on a Forward-Deployed-Engineer Agent Factory (FDE-AF) model, agents shipped into real companies, not demos. Partnering with ambitious startups now is where that starts.",
+    disclaimer: "Not a receipt like the rest of this page — this is direction.",
+  },
   palette: {
     label: "Command palette",
     placeholder: "Search sections, contact, settings…",
@@ -230,12 +239,13 @@ export default {
     deployments: "Deployments",
     capabilities: "Capabilities",
     log: "Log",
+    roadmap: "Roadmap",
     contact: "Contact",
   },
   contact: {
     title: "Contact",
-    letsConnect: "Let's Connect",
-    description: "Got a project idea or want to work together? Reach out via {email} or connect on {linkedin}. I'm open to contract work right now and full-time roles.",
+    letsConnect: "Bring me the problem",
+    description: "If you're an AI startup, anywhere, looking for a long-term partner to own the system through to scale, not another hire, that's what I'm looking for. Reach out via {email} or {linkedin}.",
     emailLink: "email",
     linkedinLink: "LinkedIn",
   },

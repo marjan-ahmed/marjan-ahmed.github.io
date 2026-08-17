@@ -39,16 +39,16 @@ export function HeroConsole() {
       />
 
       <Container className="relative">
-        <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+        <div className="grid items-start gap-10 lg:grid-cols-[5fr_3fr] lg:gap-10">
           {/* ---------------- Positioning ---------------- */}
-          <div className="lg:col-span-7">
+          <div className="min-w-0">
             <div className="animate-rise-in flex items-center gap-2.5">
               <StatusDot tone="live" />
               <span className="mono-label text-signal">{t("eyebrow")}</span>
             </div>
 
             <h1
-              className="animate-rise-in mt-6 border-s-2 border-signal ps-5 text-balance text-[2.5rem] font-semibold leading-[1.04] tracking-[-0.03em] sm:text-5xl lg:text-[3.5rem]"
+              className="animate-rise-in mt-6 border-s-2 border-signal ps-5 text-balance text-4xl font-semibold leading-[1.04] tracking-[-0.03em] sm:text-5xl"
               style={{ animationDelay: "60ms" }}
             >
               {t("headline")}
@@ -114,7 +114,7 @@ export function HeroConsole() {
 
           {/* ---------------- Operator card ---------------- */}
           <div
-            className="animate-rise-in lg:col-span-5"
+            className="animate-rise-in"
             style={{ animationDelay: "240ms" }}
           >
             <div className="rounded-2xl border border-rule bg-card/70 p-5 shadow-[0_1px_0_0_var(--rule)] backdrop-blur-sm sm:p-6">
@@ -128,14 +128,14 @@ export function HeroConsole() {
                   <img
                     src={DATA.avatarUrl}
                     alt={DATA.name}
-                    width={72}
-                    height={72}
-                    className="size-[72px] rounded-lg object-cover"
+                    width={64}
+                    height={64}
+                    className="size-16 rounded-lg object-cover"
                   />
                 </div>
 
                 <div className="min-w-0">
-                  <h2 className="truncate text-base font-semibold tracking-tight">
+                  <h2 className="text-pretty text-base font-semibold leading-snug tracking-tight">
                     {DATA.name}
                   </h2>
                   <p className="mono-label mt-1.5 text-muted-foreground">

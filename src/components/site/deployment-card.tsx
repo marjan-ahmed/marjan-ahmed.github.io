@@ -9,6 +9,11 @@ import { cn } from "@/lib/utils";
 import { ArchitectureFlow } from "./architecture-flow";
 import { Chip, StatusDot } from "./primitives";
 
+const originTone: Record<Deployment["origin"], string> = {
+  self: "border-signal/35 bg-signal-soft text-signal",
+  hackathon: "border-rule bg-surface text-muted-foreground",
+};
+
 /**
  * One labelled beat of the case study. The label is what makes the whole
  * page legible: every deployment answers the same four questions in the
@@ -90,6 +95,9 @@ export function DeploymentCard({
               ·
             </span>
             <span className="mono-label text-muted-foreground">{d.year}</span>
+            <Chip className={cn("mono-label", originTone[d.origin])}>
+              {t(`origin.${d.origin}`)}
+            </Chip>
           </div>
 
           <h3 className="text-balance text-xl font-semibold tracking-tight sm:text-2xl">

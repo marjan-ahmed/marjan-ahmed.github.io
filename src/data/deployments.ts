@@ -49,6 +49,8 @@ export interface Deployment {
   year: string;
   /** Drives the status dot colour + label key. */
   status: "won" | "live" | "shipped";
+  /** Who initiated it — self-directed build vs. a hackathon/competition brief. */
+  origin: "self" | "hackathon";
   /** Awards render as a signal-coloured ribbon. */
   award?: string;
   /** Real screenshot of the shipped product — shown as evidence, not decoration. */
@@ -64,42 +66,12 @@ export interface Deployment {
 
 export const DEPLOYMENTS: Deployment[] = [
   {
-    id: "docsamajh",
-    name: "DocSamajh AI",
-    context: "AI Financial Hackathon · LandingAI",
-    year: "Dec 2025",
-    status: "shipped",
-    image: getAssetPath("projects/docsamajh-ui.png"),
-    imageWidth: 2560,
-    imageHeight: 1600,
-    stack: [
-      "Python",
-      "LandingAI ADE",
-      "Google Gemini",
-      "OpenAI Agents SDK",
-      "Streamlit",
-    ],
-    arch: [
-      { id: "docs", label: "Scanned invoices", detail: "PDF · image", kind: "source" },
-      { id: "ade", label: "Structure extraction", detail: "LandingAI ADE", kind: "model" },
-      { id: "norm", label: "Line-item normaliser", detail: "Gemini", kind: "model" },
-      { id: "agents", label: "Matching agents", detail: "OpenAI Agents SDK", kind: "service" },
-      { id: "review", label: "Exception review", detail: "Streamlit", kind: "surface" },
-    ],
-    metrics: [
-      { value: "85–90%", label: "match accuracy", headline: true },
-      { value: "~70%", label: "manual effort removed" },
-    ],
-    links: [
-      { label: "Source", href: "https://github.com/marjan-ahmed/docsamajh-ai", kind: "source" },
-    ],
-  },
-  {
     id: "textbook",
     name: "Physical AI & Humanoid Robotics",
     context: "AI-native learning platform",
     year: "2025 — present",
     status: "live",
+    origin: "self",
     image: getAssetPath("projects/textbook-hero.png"),
     imageWidth: 2560,
     imageHeight: 1600,
@@ -130,37 +102,12 @@ export const DEPLOYMENTS: Deployment[] = [
     ],
   },
   {
-    id: "vault",
-    name: "AI Employee Vault",
-    context: "GIAIC Hackathon 0",
-    year: "2025",
-    status: "shipped",
-    image: getAssetPath("projects/ai-vault.png"),
-    imageWidth: 1312,
-    imageHeight: 816,
-    stack: ["Python", "MCP", "Claude Code", "Obsidian", "FastAPI"],
-    arch: [
-      { id: "watch", label: "Signal watchers", detail: "Gmail · WhatsApp · FS", kind: "source" },
-      { id: "mcp", label: "Custom MCP server", detail: "Model Context Protocol", kind: "service" },
-      { id: "worker", label: "Execution worker", detail: "Claude Code", kind: "model" },
-      { id: "gate", label: "Approval gate", detail: "human-in-the-loop", kind: "service" },
-      { id: "vault", label: "Obsidian vault", detail: "audit trail", kind: "surface" },
-    ],
-    metrics: [
-      { value: "100%", label: "writes gated on approval", headline: true },
-      { value: "3", label: "channels watched" },
-      { value: "1", label: "readable audit trail" },
-    ],
-    links: [
-      { label: "Source", href: "https://github.com/marjan-ahmed/ai_employee_vault", kind: "source" },
-    ],
-  },
-  {
     id: "gemini-starter",
     name: "Gemini Starter Agent",
     context: "Open source · PyPI",
     year: "Sep 2025",
     status: "live",
+    origin: "self",
     image: getAssetPath("projects/gemini-pypi.png"),
     imageWidth: 2560,
     imageHeight: 1600,
@@ -186,12 +133,72 @@ export const DEPLOYMENTS: Deployment[] = [
     ],
   },
   {
+    id: "docsamajh",
+    name: "DocSamajh AI",
+    context: "AI Financial Hackathon · LandingAI",
+    year: "Dec 2025",
+    status: "shipped",
+    origin: "hackathon",
+    image: getAssetPath("projects/docsamajh-ui.png"),
+    imageWidth: 2560,
+    imageHeight: 1600,
+    stack: [
+      "Python",
+      "LandingAI ADE",
+      "Google Gemini",
+      "OpenAI Agents SDK",
+      "Streamlit",
+    ],
+    arch: [
+      { id: "docs", label: "Scanned invoices", detail: "PDF · image", kind: "source" },
+      { id: "ade", label: "Structure extraction", detail: "LandingAI ADE", kind: "model" },
+      { id: "norm", label: "Line-item normaliser", detail: "Gemini", kind: "model" },
+      { id: "agents", label: "Matching agents", detail: "OpenAI Agents SDK", kind: "service" },
+      { id: "review", label: "Exception review", detail: "Streamlit", kind: "surface" },
+    ],
+    metrics: [
+      { value: "85–90%", label: "match accuracy", headline: true },
+      { value: "~70%", label: "manual effort removed" },
+    ],
+    links: [
+      { label: "Source", href: "https://github.com/marjan-ahmed/docsamajh-ai", kind: "source" },
+    ],
+  },
+  {
+    id: "vault",
+    name: "AI Employee Vault",
+    context: "GIAIC Hackathon 0",
+    year: "2025",
+    status: "shipped",
+    origin: "hackathon",
+    image: getAssetPath("projects/ai-vault.png"),
+    imageWidth: 1312,
+    imageHeight: 816,
+    stack: ["Python", "MCP", "Claude Code", "Obsidian", "FastAPI"],
+    arch: [
+      { id: "watch", label: "Signal watchers", detail: "Gmail · WhatsApp · FS", kind: "source" },
+      { id: "mcp", label: "Custom MCP server", detail: "Model Context Protocol", kind: "service" },
+      { id: "worker", label: "Execution worker", detail: "Claude Code", kind: "model" },
+      { id: "gate", label: "Approval gate", detail: "human-in-the-loop", kind: "service" },
+      { id: "vault", label: "Obsidian vault", detail: "audit trail", kind: "surface" },
+    ],
+    metrics: [
+      { value: "100%", label: "writes gated on approval", headline: true },
+      { value: "3", label: "channels watched" },
+      { value: "1", label: "readable audit trail" },
+    ],
+    links: [
+      { label: "Source", href: "https://github.com/marjan-ahmed/ai_employee_vault", kind: "source" },
+    ],
+  },
+  {
     id: "hekto",
     name: "Hekto Marketplace",
     context: "Hackathon Sprint · GIAIC",
     year: "Jan–Feb 2025",
     status: "shipped",
     award: "Featured — GIAIC Demo Day",
+    origin: "hackathon",
     image: getAssetPath("projects/hekto-store.png"),
     imageWidth: 2412,
     imageHeight: 1600,

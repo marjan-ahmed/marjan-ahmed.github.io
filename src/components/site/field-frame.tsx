@@ -36,17 +36,25 @@ export function FieldFrame({
         <Reticle className="end-0 top-0 border-e-2 border-t-2" />
         <Reticle className="bottom-0 start-0 border-b-2 border-s-2" />
         <Reticle className="bottom-0 end-0 border-b-2 border-e-2" />
-        <div className={cn("relative overflow-hidden rounded-lg", aspectClassName)}>
+        <div className={cn("group/photo relative overflow-hidden rounded-lg", aspectClassName)}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={src}
             alt={alt}
             loading="lazy"
-            className="size-full object-cover grayscale contrast-[1.12] brightness-[0.95]"
+            className={cn(
+              "size-full object-cover grayscale contrast-[1.12] brightness-[0.95]",
+              "transition-[filter] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
+              "group-hover/photo:grayscale-0 group-hover/photo:contrast-100 group-hover/photo:brightness-100"
+            )}
           />
           <span
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-signal mix-blend-color opacity-25"
+            className={cn(
+              "pointer-events-none absolute inset-0 bg-signal mix-blend-color opacity-25",
+              "transition-opacity duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]",
+              "group-hover/photo:opacity-0"
+            )}
           />
         </div>
       </div>

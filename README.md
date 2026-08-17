@@ -1,9 +1,9 @@
 <div align="center">
-<img alt="Marjan Ahmed Portfolio" src="/marjan-avatar.jpg" width="120" style="border-radius: 50%">
+<img alt="Marjan Ahmed Portfolio" src="/marjan-avatar1.png" width="120" style="border-radius: 50%">
 
 # Muhammad Marjan Ahmed — Portfolio
 
-**Full-Stack Developer & Agentic AI Engineer**
+**Builder — Agentic AI Systems**
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarjan-ahmed%2Fportfolio)
 
@@ -26,6 +26,9 @@ Turbopack), TypeScript, and Tailwind CSS v4.
   with a real architecture diagram and screenshot, not just a description
 - **Command palette** — jump to any section, copy contact info, switch theme or language, all from the
   keyboard
+- **Roadmap section** — the one deliberately future-tense claim on the page, given its own oversized
+  typographic treatment instead of a fake "evidence" card, with an honest disclaimer that it isn't a
+  receipt like the rest of the site
 - **SEO-complete** — Person structured data (JSON-LD), per-locale hreflang + canonical tags, sitemap.xml,
   robots.txt
 - **Accessible** — 96/100 Lighthouse (the remaining points are one intentionally-decorative,

@@ -2,8 +2,8 @@ export default {
   hero: {
     hi: "私は{name}です",
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
-    eyebrow: "フルスタック・エージェンティックAI",
-    headline: "単発ではなく、システムを作る。",
+    eyebrow: "ビルダー・エージェンティックAI",
+    headline: "問題をくれ。システムで返す。",
     sub: "17歳、中学2年生からコーディング。頭の中では常にタブが6つくらい開きっぱなし。それでもちゃんと形にする。スタートアップ、フリーランスのクライアント、そして自分がリリースしたものをインストールした3,700人以上のために、本番アプリとAIエージェントを作っている。一度始めたら、最後までやり遂げる。何があっても。",
     cta: {
       primary: "実績を見る",
@@ -11,13 +11,13 @@ export default {
       copyEmail: "メールをコピー",
     },
     card: {
-      role: "フルスタック開発者・エージェンティックAIエンジニア",
+      role: "ビルダー — エージェンティックAIシステム",
       base: "拠点",
       local: "現地時間",
       focus: "フォーカス",
       focusValue: "エージェンティックAIシステム",
       status: "ステータス",
-      statusValue: "対応可能",
+      statusValue: "パートナー募集中",
     },
   },
   proof: {
@@ -34,6 +34,10 @@ export default {
     eyebrow: "実績",
     title: "実際にリリースしたもの",
     lede: "5つのシステム、エンドツーエンド。きっかけとなった摩擦、設計の前提となった制約、そしてそれによって動いたもの。",
+    origin: {
+      self: "自主開発",
+      hackathon: "ハッカソン作品",
+    },
     beats: {
       friction: "摩擦",
       constraint: "制約",
@@ -79,7 +83,7 @@ export default {
   },
   capabilities: {
     eyebrow: "できること",
-    title: "自分が役立つ領域",
+    title: "私の動き方",
     lede: "言語ではなく、解決する問題ごとにグループ化。実際の仕事の進み方に沿って読めるように。",
     items: {
       ship: {
@@ -201,6 +205,11 @@ export default {
       },
     },
   },
+  roadmap: {
+    eyebrow: "ロードマップ",
+    body: "ロードマップの一番上にあるのは、フォワード・デプロイド・エンジニア・エージェント・ファクトリー（FDE-AF）モデルによるAIネイティブ企業を作ること。実際の企業にエージェントを届ける、デモじゃない。野心的なスタートアップとのパートナーシップが、その始まりだ。",
+    disclaimer: "このページの他の部分と違って、これは証拠じゃない。方向性だ。",
+  },
   palette: {
     label: "コマンドパレット",
     placeholder: "セクション、連絡先、設定を検索…",
@@ -230,12 +239,13 @@ export default {
     deployments: "実績",
     capabilities: "できること",
     log: "LOG",
+    roadmap: "ロードマップ",
     contact: "連絡先",
   },
   contact: {
     title: "お問い合わせ",
-    letsConnect: "つながりましょう",
-    description: "プロジェクトのアイデアがある方、一緒に働きたい方は{email}または{linkedin}でご連絡ください。現在、契約制の仕事に応募可能です。",
+    letsConnect: "問題を持ってきて",
+    description: "AIスタートアップで、どこの国でも構わないから、システムをスケールアップまで責任を持って任せられる長期的なパートナーを探しているなら、それが自分の探しているものだ。肩書きじゃない。{email}か{linkedin}で連絡を。",
     emailLink: "メール",
     linkedinLink: "LinkedIn",
   },

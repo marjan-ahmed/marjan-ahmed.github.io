@@ -6,6 +6,7 @@ import { OperatingPrinciples } from '@/components/site/operating-principles';
 import { DeploymentsSection } from '@/components/site/deployments-section';
 import { CapabilityMatrix } from '@/components/site/capability-matrix';
 import { ShipLog } from '@/components/site/ship-log';
+import { RoadmapNote } from '@/components/site/roadmap-note';
 import ContactSection from '@/components/section/contact-section';
 
 export async function generateStaticParams() {
@@ -25,6 +26,7 @@ export default async function Page({params}: {params: Promise<{locale: string}>}
         <DeploymentsSection />
         <CapabilityMatrix />
         <ShipLog />
+        <RoadmapNote />
         <ContactSection />
       </main>
     </CommandPaletteProvider>

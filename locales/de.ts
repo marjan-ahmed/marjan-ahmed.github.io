@@ -2,8 +2,8 @@ export default {
   hero: {
     hi: "Ich bin {name}",
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
-    eyebrow: "FULL-STACK · AGENTIC AI",
-    headline: "Ich baue Systeme, keine Einzelprojekte.",
+    eyebrow: "ERBAUER · AGENTIC AI",
+    headline: "Gib mir das Problem. Ich baue das System.",
     sub: "17, programmiere seit Klasse 8, mit ungefähr sechs offenen Tabs im Kopf gleichzeitig, und liefere trotzdem echte Dinge: Produktions-Apps und KI-Agenten für ein Startup, Freelance-Kunden und über 3.700 Menschen, die etwas installiert haben, das ich gebaut habe. Wenn ich anfange, ziehe ich es durch. Egal was kommt.",
     cta: {
       primary: "Projekte ansehen",
@@ -11,13 +11,13 @@ export default {
       copyEmail: "E-Mail kopieren",
     },
     card: {
-      role: "Full-Stack Developer & Agentic AI Engineer",
+      role: "Erbauer — Agentic-AI-Systeme",
       base: "Standort",
       local: "Ortszeit",
       focus: "Fokus",
       focusValue: "Agentic-AI-Systeme",
       status: "Status",
-      statusValue: "Verfügbar",
+      statusValue: "Offen für Partnerschaft",
     },
   },
   proof: {
@@ -34,6 +34,10 @@ export default {
     eyebrow: "PROJEKTE",
     title: "Was tatsächlich fertig wurde",
     lede: "Fünf Systeme, end-to-end. Der Reibungspunkt, der sie ausgelöst hat, die Einschränkung, um die herum ich entworfen habe, und was sich dadurch bewegt hat.",
+    origin: {
+      self: "Eigeninitiative",
+      hackathon: "Hackathon-Projekt",
+    },
     beats: {
       friction: "Reibung",
       constraint: "Einschränkung",
@@ -79,7 +83,7 @@ export default {
   },
   capabilities: {
     eyebrow: "FÄHIGKEITEN",
-    title: "Wo ich nützlich bin",
+    title: "Wie ich arbeite",
     lede: "Gruppiert nach dem Problem, das jede löst, nicht nach Sprache, damit es so liest, wie die Arbeit tatsächlich abläuft.",
     items: {
       ship: {
@@ -201,6 +205,11 @@ export default {
       },
     },
   },
+  roadmap: {
+    eyebrow: "ROADMAP",
+    body: "Ganz oben auf meiner Roadmap: ein KI-natives Unternehmen nach dem Forward-Deployed-Engineer-Agent-Factory-Modell (FDE-AF), Agenten, die in echten Unternehmen eingesetzt werden, keine Demos. Die Partnerschaft mit ambitionierten Startups beginnt jetzt.",
+    disclaimer: "Kein Beleg wie der Rest dieser Seite — das ist eine Richtung.",
+  },
   palette: {
     label: "Befehlspalette",
     placeholder: "Abschnitte, Kontakt, Einstellungen durchsuchen…",
@@ -230,12 +239,13 @@ export default {
     deployments: "Projekte",
     capabilities: "Fähigkeiten",
     log: "Log",
+    roadmap: "Roadmap",
     contact: "Kontakt",
   },
   contact: {
     title: "Kontakt",
-    letsConnect: "Verbinden wir uns",
-    description: "Haben Sie ein Projekt oder möchten Sie zusammenarbeiten? Kontaktieren Sie mich per {email} oder {linkedin}. Ich bin offen für Vertragsarbeit.",
+    letsConnect: "Gib mir das Problem",
+    description: "Wenn Sie ein KI-Startup sind, egal wo, und einen langfristigen Partner suchen, der das System bis zum Scale-up verantwortet, keine weitere Neueinstellung, ist das, wonach ich suche. Kontaktieren Sie mich per {email} oder {linkedin}.",
     emailLink: "E-Mail",
     linkedinLink: "LinkedIn",
   },

@@ -2,8 +2,8 @@ export default {
   hero: {
     hi: "我是{name}",
     description: "全栈开发者和智能体AI工程师，构建生产级Web应用和已部署的AI智能体系统。",
-    eyebrow: "全栈 · 智能体AI",
-    headline: "我构建系统，而非一次性项目。",
+    eyebrow: "建造者 · 智能体AI",
+    headline: "把问题给我，我带回系统。",
     sub: "17岁，从八年级开始编程，脑子里同时开着大约六个标签页，但依然能交付真实的东西：为初创公司、自由职业客户构建生产级应用和AI智能体，还有3,700多人安装了我构建的东西。一旦开始，就会完成，无论遇到什么。",
     cta: {
       primary: "查看部署项目",
@@ -11,13 +11,13 @@ export default {
       copyEmail: "复制邮箱",
     },
     card: {
-      role: "全栈开发者 & 智能体AI工程师",
+      role: "建造者 — 智能体AI系统",
       base: "所在地",
       local: "当地时间",
       focus: "专注领域",
       focusValue: "智能体AI系统",
       status: "状态",
-      statusValue: "开放工作机会",
+      statusValue: "寻找合作伙伴",
     },
   },
   proof: {
@@ -34,6 +34,10 @@ export default {
     eyebrow: "部署项目",
     title: "实际交付的成果",
     lede: "五个系统，端到端。启动它们的摩擦点、我围绕其设计的约束条件，以及因此而改变的一切。",
+    origin: {
+      self: "自主项目",
+      hackathon: "黑客松作品",
+    },
     beats: {
       friction: "摩擦",
       constraint: "约束",
@@ -79,7 +83,7 @@ export default {
   },
   capabilities: {
     eyebrow: "能力",
-    title: "我的价值所在",
+    title: "我如何运作",
     lede: "按每个能力解决的问题分组，而非按语言分类，以便按照实际工作方式阅读。",
     items: {
       ship: {
@@ -201,6 +205,11 @@ export default {
       },
     },
   },
+  roadmap: {
+    eyebrow: "路线图",
+    body: "我路线图上的第一件事：基于前线部署工程师代理工厂（Forward-Deployed-Engineer Agent Factory，FDE-AF）模式打造一家AI原生公司——把智能体真正部署进企业，而不是做演示。与有野心的初创公司建立合作，就是这一切的开始。",
+    disclaimer: "不像这页其他部分那样有据可查——这是方向。",
+  },
   palette: {
     label: "命令面板",
     placeholder: "搜索板块、联系方式、设置...",
@@ -230,12 +239,13 @@ export default {
     deployments: "部署项目",
     capabilities: "能力",
     log: "日志",
+    roadmap: "路线图",
     contact: "联系方式",
   },
   contact: {
     title: "联系方式",
-    letsConnect: "联系我",
-    description: "有项目想法或想合作？通过{email}或{linkedin}联系我。目前开放合同工作和全职职位。",
+    letsConnect: "把问题交给我",
+    description: "如果你是一家AI初创公司，无论身处何地，正在寻找一位长期合作伙伴，能全权负责系统直到规模化，而不是又一个雇员，那正是我在寻找的。通过{email}或{linkedin}联系我。",
     emailLink: "邮箱",
     linkedinLink: "LinkedIn",
   },

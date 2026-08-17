@@ -2,8 +2,8 @@ export default {
   hero: {
     hi: "Je suis {name}",
     description: "Full-Stack Developer & Agentic AI Engineer building production web apps and shipped AI agent systems.",
-    eyebrow: "FULL-STACK · IA AGENTIQUE",
-    headline: "Je construis des systèmes, pas des projets isolés.",
+    eyebrow: "BÂTISSEUR · IA AGENTIQUE",
+    headline: "Donnez-moi le problème. Je livre le système.",
     sub: "17 ans, je code depuis la classe 8, avec environ six onglets ouverts dans ma tête en permanence, et je livre quand même des choses réelles : applications de production et agents IA pour une startup, des clients freelance, et plus de 3 700 personnes qui ont installé quelque chose que j'ai construit. Une fois que je commence, je termine. Quoi qu'il arrive.",
     cta: {
       primary: "Voir les réalisations",
@@ -11,13 +11,13 @@ export default {
       copyEmail: "Copier l'email",
     },
     card: {
-      role: "Développeur Full-Stack & Ingénieur IA Agentique",
+      role: "Bâtisseur — Systèmes d'IA Agentique",
       base: "Base",
       local: "Heure locale",
       focus: "Focus",
       focusValue: "Systèmes d'IA agentique",
       status: "Statut",
-      statusValue: "Disponible",
+      statusValue: "Ouvert à un partenariat",
     },
   },
   proof: {
@@ -34,6 +34,10 @@ export default {
     eyebrow: "RÉALISATIONS",
     title: "Ce qui a vraiment été livré",
     lede: "Cinq systèmes, de bout en bout. Le point de friction qui les a déclenchés, la contrainte autour de laquelle j'ai conçu, et ce qui a changé grâce à ça.",
+    origin: {
+      self: "Initiative personnelle",
+      hackathon: "Projet de hackathon",
+    },
     beats: {
       friction: "Friction",
       constraint: "Contrainte",
@@ -79,7 +83,7 @@ export default {
   },
   capabilities: {
     eyebrow: "COMPÉTENCES",
-    title: "En quoi je suis utile",
+    title: "Comment j'opère",
     lede: "Regroupées par problème résolu, pas par langage, pour refléter la façon dont le travail se déroule réellement.",
     items: {
       ship: {
@@ -201,6 +205,11 @@ export default {
       },
     },
   },
+  roadmap: {
+    eyebrow: "ROADMAP",
+    body: "En tête de ma feuille de route : une entreprise AI-native sur un modèle Forward-Deployed-Engineer Agent Factory (FDE-AF), des agents déployés dans de vraies entreprises, pas des démos. Le partenariat avec des startups ambitieuses commence maintenant.",
+    disclaimer: "Pas une preuve comme le reste de cette page — c'est une direction.",
+  },
   palette: {
     label: "Palette de commandes",
     placeholder: "Rechercher sections, contact, réglages…",
@@ -230,12 +239,13 @@ export default {
     deployments: "Réalisations",
     capabilities: "Compétences",
     log: "Journal",
+    roadmap: "Roadmap",
     contact: "Contact",
   },
   contact: {
     title: "Contact",
-    letsConnect: "Connectons-nous",
-    description: "Vous avez un projet ou voulez collaborer ? Contactez-moi via {email} ou {linkedin}. Je suis ouvert au travail contractuel.",
+    letsConnect: "Confiez-moi le problème",
+    description: "Si vous êtes une startup IA, où que ce soit, à la recherche d'un partenaire à long terme pour porter le système jusqu'au scale-up, pas d'une nouvelle recrue, c'est ce que je cherche. Contactez-moi via {email} ou {linkedin}.",
     emailLink: "email",
     linkedinLink: "LinkedIn",
   },
