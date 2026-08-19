@@ -10,7 +10,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/karachi",
   description:
     "Muhammad Marjan Ahmed — Builder in Karachi, Pakistan. I take ambiguous problems and bring back shipped systems: production apps, AI agents, platforms people actually use.",
-  avatarUrl: getAssetPath("marjan-avatar1.png"),
+  avatarUrl: getAssetPath("35756-clean.png"),
   /** IANA zone drives the live clock in the hero. */
   timezone: "Asia/Karachi",
   /**
