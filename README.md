@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="Marjan Ahmed Portfolio" src="/marjan-avatar1.png" width="120" style="border-radius: 50%">
+<img alt="Marjan Ahmed Portfolio" src="/public/35756-clean.png" width="120" style="border-radius: 50%">
 
 # Muhammad Marjan Ahmed — Portfolio
 
