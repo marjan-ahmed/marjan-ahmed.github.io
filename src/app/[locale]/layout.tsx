@@ -1,7 +1,7 @@
 import I18nProvider from '@/components/i18n-provider';
 
 import { cn } from '@/lib/utils';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter, Geist_Mono } from 'next/font/google';
 import { Metadata } from 'next';
 import { DATA } from '@/data/resume';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -15,10 +15,9 @@ import {notFound} from 'next/navigation';
 import {LanguageSwitcher} from '@/components/language-switcher';
 import '../globals.css';
 
-const geist = Geist({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
-  weight: ['400','500','600','700'],
 });
 
 const geistMono = Geist_Mono({
@@ -101,7 +100,7 @@ export default async function LocaleLayout({
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased relative',
-          geist.variable,
+          inter.variable,
           geistMono.variable
         )}
       >
